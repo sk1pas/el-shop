@@ -4,6 +4,19 @@
     session_start();
     include("include/auth_cookie.php");
     //unset($_SESSION['auth']);
+    
+    $id = clear_string($_GET["id"]);
+    $action = clear_string($_GET["action"]);
+    
+    switch ($action) {
+        case 'clear':
+        $clear = mysql_query("DELETE FROM cart WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'", $link);
+        break;
+        
+        case 'delete':
+        $delete = mysql_query("DELETE FROM cart WHERE cart_id = '$id' and cart_ip = '{$_SERVER['REMOTE_ADDR']}'", $link);
+        break;
+    }
 
 ?>
 <!DOCTYPE HTML>
@@ -59,7 +72,12 @@
         </div>        
         ';
         
-        echo '        
+        $result = mysql_query("SELECT * FROM cart,table_products WHERE cart.cart_ip = '{$_SERVER['REMOTE_ADDR']}' AND table_products.products_id = cart.cart_id_product",$link);
+        
+        if (mysql_num_rows($result) > 0) {
+            $row = mysql_fetch_array($result);
+            
+            echo '        
         <div id="header-list-cart">        
         <div id="header1">Изображение</div>
         <div id="header2">Наименование товара</div>
@@ -67,19 +85,39 @@
         <div id="header4">Цена</div>        
         </div>        
         ';
-        
-        echo '
+            
+            do {
+                $int = $row["cart_price"] * $row["cart_count"];
+                $all_price = $all_price + $int;
+                
+                if (strlen($row["image"]) > 0 && file_exists("./uploads_images/".$row["image"])) {
+                    $img_path = './uploads_images/'.$row["image"];
+                    $max_width = 100;
+                    $max_height = 100;
+                    list($width, $height) = getimagesize($img_path);
+                    $ratioh = $max_height/$height;
+                    $ratiow = $max_width/$width;
+                    $ratio = min($ratioh, $ratiow);
+                    
+                    $width = intval($ratio*$width);
+                    $height = intval($ratio*$height);
+                } else {
+                    $img_path = "/images/noimages.jpeg";
+                    $width = 120;
+                    $height = 105;
+                }
+               
+               echo '
         
         <div class="block-list-cart">
         
         <div class="img-cart">
-        <p align="center"><img src="" width="" heigh="" /></p>
+        <p align="center"><img src="'.$img_path.'" width="'.$width.'" heigh="'.$height.'" /></p>
         </div>
         
         <div class="title-cart">
-        <p><a href="">Смартфон</a></p>
-        <p class="cart-mini_features">СмартфонСмартфон<br>
-        СмартфонСмартфонСмартфонСмартфон<br>СмартфонСмартфон</p>
+        <p><a href="">'.$row["title"].'</a></p>
+        <p class="cart-mini_features">'.$row["mini_features"].'</p>
         </div>
         
         <div class="count-cart">
@@ -90,7 +128,7 @@
         </li>
         
         <li>
-        <p align="center"><input class="count-input" maxlength="3" type="text" /></p>
+        <p align="center"><input class="count-input" maxlength="3" type="text" value="'.$row["cart_count"].'"/></p>
         </li>
         
         <li>
@@ -100,14 +138,27 @@
         </ul>
         </div>
         
-        <div class="price-product"><h5><span class="span-count">1</span> x <span>10000 грн</span></h5><p>10000 грн</p></div>
-        <div class="delete-cart"><a href=""><img src="/images/bsk_item_del.png"/></a></div>
+        <div class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p>'.$int.' грн</p></div>
+        <div class="delete-cart"><a href="cart.php?id='.$row["cart_id"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
         
         <div id="bottom-cart-line"></div>
         </div> 
         
         
         ';
+                
+            }
+            while ($row = mysql_fetch_array($result));
+            
+            echo '
+            <h2 class="itog-price" align="right">Итого: <strong>'.$all_price.'</strong> грн</h2>
+            <p align="right" class="button-next" ><a href="cart.php?action=confirm">Далее</a></p>            
+            ';
+        }
+        else
+        {
+            echo '<h3 id="clear-cart" align="center">Корзина пуста</h3>';
+        }               
         
         break;
         
@@ -152,6 +203,110 @@
         break;
         
         default:
+        
+        echo '        
+        <div id="block-step">        
+        <div id="name-step">        
+        <ul>
+        <li><a class="active">1. Корзина товаров</a></li>
+        <li><span>&rarr;</span></li>
+        <li><a>2. Контактная информация</a></li>
+        <li><span>&rarr;</span></li>
+        <li><a>3. Завершение</a></li>                
+        </ul>        
+        </div>        
+        <p>шаг 1 из 3</p>
+        <a href="cart.php?action=clear">Очистить</a>        
+        </div>        
+        ';
+        
+        $result = mysql_query("SELECT * FROM cart,table_products WHERE cart.cart_ip = '{$_SERVER['REMOTE_ADDR']}' AND table_products.products_id = cart.cart_id_product",$link);
+        
+        if (mysql_num_rows($result) > 0) {
+            $row = mysql_fetch_array($result);
+            
+            echo '        
+        <div id="header-list-cart">        
+        <div id="header1">Изображение</div>
+        <div id="header2">Наименование товара</div>
+        <div id="header3">Кол-во</div>
+        <div id="header4">Цена</div>        
+        </div>        
+        ';
+            
+            do {
+                $int = $row["cart_price"] * $row["cart_count"];
+                $all_price = $all_price + $int;
+                
+                if (strlen($row["image"]) > 0 && file_exists("./uploads_images/".$row["image"])) {
+                    $img_path = './uploads_images/'.$row["image"];
+                    $max_width = 100;
+                    $max_height = 100;
+                    list($width, $height) = getimagesize($img_path);
+                    $ratioh = $max_height/$height;
+                    $ratiow = $max_width/$width;
+                    $ratio = min($ratioh, $ratiow);
+                    
+                    $width = intval($ratio*$width);
+                    $height = intval($ratio*$height);
+                } else {
+                    $img_path = "/images/noimages.jpeg";
+                    $width = 120;
+                    $height = 105;
+                }
+               
+               echo '
+        
+        <div class="block-list-cart">
+        
+        <div class="img-cart">
+        <p align="center"><img src="'.$img_path.'" width="'.$width.'" heigh="'.$height.'" /></p>
+        </div>
+        
+        <div class="title-cart">
+        <p><a href="">'.$row["title"].'</a></p>
+        <p class="cart-mini_features">'.$row["mini_features"].'</p>
+        </div>
+        
+        <div class="count-cart">
+        <ul class="input-count-style">
+        
+        <li>
+        <p align="center" class="count-minus">-</p>
+        </li>
+        
+        <li>
+        <p align="center"><input class="count-input" maxlength="3" type="text" value="'.$row["cart_count"].'"/></p>
+        </li>
+        
+        <li>
+        <p align="center" class="count-plus">+</p>
+        </li>
+        
+        </ul>
+        </div>
+        
+        <div class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p>'.$int.' грн</p></div>
+        <div class="delete-cart"><a href="cart.php?id='.$row["cart_id"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
+        
+        <div id="bottom-cart-line"></div>
+        </div> 
+        
+        
+        ';
+                
+            }
+            while ($row = mysql_fetch_array($result));
+            
+            echo '
+            <h2 class="itog-price" align="right">Итого: <strong>'.$all_price.'</strong> грн</h2>
+            <p align="right" class="button-next" ><a href="cart.php?action=confirm">Далее</a></p>            
+            ';
+        }
+        else
+        {
+            echo '<h3 id="clear-cart" align="center">Корзина пуста</h3>';
+        }     
         
         break;
     }
