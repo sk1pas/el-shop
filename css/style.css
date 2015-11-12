@@ -1501,3 +1501,105 @@
     margin-top: -5px;
     padding-top: 0px;
 }
+
+#info-radio > li > input{
+    margin-top: 7px;
+    margin-right: 7px;
+}
+
+#info-radio > li{
+    font: 15px tahoma;    
+}
+
+#info-ordera{
+    margin-top: 25px;
+}
+
+#info-order > li{
+    margin-top: 10px;
+}
+
+#info-order > li > input{
+    height: 30px;
+    width: 345px;
+    font: 17px tahoma;
+    margin-left: 120px;
+    border-left: 1px solid #ABABAB;
+    border-top: 1px solid #ABABAB;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding-left: 5px;
+}
+
+#info-order > li > input:focus,#info-order > li > textarea:focus{
+    border: 1px solid #C4E1EB;
+}
+
+#info-order > li > textarea{
+    height: 110px;
+    width: 346px;
+    margin-left: 120px;
+    border-left: 1px solid #ABABAB;
+    border-top: 1px solid #ABABAB;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+#info-order > li > label{
+    font: 14px tahoma;
+    color: #464646;
+    position: absolute;
+    margin-top: 7px;
+}
+
+#info-order > li > label.order_label_style{
+    margin-top: 0px;
+}
+
+#info-order > li > span{
+    font: italic 13px tahoma;
+    color: #A7A7A7;
+    margin-left: 15px;
+    margin-top: -1px;
+    position: absolute;
+}
+
+#info-order > li > span.order_span_style{
+    margin-top: 7px;
+}
+
+#confirm-button-next{
+    background: url(/images/grd-next.png);
+    border: 1px solid #B0C181;
+    font: 15px tahoma;
+    color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    cursor: pointer;
+}
+
+#list-info {
+    width: 807px;
+    height: 228px;
+    padding-top: 7px;
+    background: url(/images/boxshadow.png) no-repeat;
+}
+
+#list-info > li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font: 17px tahoma;
+    padding-left: 15px;
+}
+
+#list-info > li > strong{
+    font: bold 14px tahoma;
+    margin-right: 10px;
+}
+
+
