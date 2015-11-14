@@ -181,8 +181,8 @@ If ($temp[0] > 0)
             <li><img src="/images/eye-icon.png"/><p>0</p></li>
             <li><img src="/images/comment-icon.png"/><p>0</p></li>
             </ul>
-            <a class="add-cart-style-grid" href=""></a>
-            <p class="style-price-grid"><strong>'.$row["price"].'</strong> грн</p>
+            <a class="add-cart-style-grid" href="" tid="'.$row["products_id"].'"></a>
+            <p class="style-price-grid"><strong>'.group_numerals($row["price"]).'</strong> грн</p>
             <div class="mini-features">
             '.$row["mini_features"].'            
             </div>
@@ -240,8 +240,8 @@ If ($temp[0] > 0)
             
             <p class="style-title-list"><a href="">'.$row["title"].'</a></p>
             
-            <a class="add-cart-style-list" href=""></a>
-            <p class="style-price-list"><strong>'.$row["price"].'</strong> грн</p>
+            <a class="add-cart-style-list" href="" tid="'.$row["products_id"].'"></a>
+            <p class="style-price-list"><strong>'.group_numerals($row["price"]).'</strong> грн</p>
             <div class="style-text-list">
             '.$row["mini_description"].'            
             </div>

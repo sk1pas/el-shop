@@ -206,12 +206,16 @@
     margin-top: -7px;
 }
 
-#block-bascket {
+#block-basket {
     margin-top: 0px;
     padding-top: 7px;    
 }
 
-#block-bascket a{
+#block-basket span{
+    color: #34659D;    
+}
+
+#block-basket a{
     font: bold 15px sans-serif;
     text-decoration: none;
     margin-left: 40px;
@@ -220,11 +224,12 @@
     color: black;    
 }
 
-#block-bascket a:hover{
-    border-bottom: none;       
+#block-basket a:hover{
+    border-bottom: none;
+    color: black;       
 }
 
-#block-bascket img{
+#block-basket img{
     position: absolute;
     margin-top: -3px;       
 }

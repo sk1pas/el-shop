@@ -14,7 +14,7 @@
         break;
         
         case 'delete':
-        $delete = mysql_query("DELETE FROM cart WHERE cart_id = '$id' and cart_ip = '{$_SERVER['REMOTE_ADDR']}'", $link);
+        $delete = mysql_query("DELETE FROM cart WHERE cart_id_product = '$id' and cart_ip = '{$_SERVER['REMOTE_ADDR']}'", $link);
         break;
     }
     
@@ -165,7 +165,7 @@
         </div>
         
         <div class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p>'.$int.' грн</p></div>
-        <div class="delete-cart"><a href="cart.php?id='.$row["cart_id"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
+        <div class="delete-cart"><a href="cart.php?id='.$row["cart_id_product"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
         
         <div id="bottom-cart-line"></div>
         </div> 
@@ -386,7 +386,7 @@
         </div>
         
         <div class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p>'.$int.' грн</p></div>
-        <div class="delete-cart"><a href="cart.php?id='.$row["cart_id"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
+        <div class="delete-cart"><a href="cart.php?id='.$row["cart_id_product"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
         
         <div id="bottom-cart-line"></div>
         </div> 
