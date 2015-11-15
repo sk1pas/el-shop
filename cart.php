@@ -150,21 +150,21 @@
         <ul class="input-count-style">
         
         <li>
-        <p align="center" class="count-minus">-</p>
+        <p align="center" class="count-minus" iid="'.$row["cart_id_product"].'">-</p>
         </li>
         
         <li>
-        <p align="center"><input class="count-input" maxlength="3" type="text" value="'.$row["cart_count"].'"/></p>
+        <p align="center"><input id="input-id'.$row["cart_id_product"].'"class="count-input" maxlength="3" type="text" value="'.$row["cart_count"].'" iid="'.$row["cart_id_product"].'"/></p>
         </li>
         
         <li>
-        <p align="center" class="count-plus">+</p>
+        <p align="center" class="count-plus" iid="'.$row["cart_id_product"].'">+</p>
         </li>
         
         </ul>
         </div>
         
-        <div class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p>'.$int.' грн</p></div>
+        <div id="tovar'.$row["cart_id_product"].'" class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p price="'.$row["cart_price"].'">'.group_numerals($int).' грн</p></div>
         <div class="delete-cart"><a href="cart.php?id='.$row["cart_id_product"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
         
         <div id="bottom-cart-line"></div>
@@ -177,7 +177,7 @@
             while ($row = mysql_fetch_array($result));
             
             echo '
-            <h2 class="itog-price" align="right">Итого: <strong>'.$all_price.'</strong> грн</h2>
+            <h2 class="itog-price" align="right">Итого: <strong>'.group_numerals($all_price).'</strong> грн</h2>
             <p align="right" class="button-next" ><a href="cart.php?action=confirm">Далее</a></p>            
             ';
         }
@@ -371,21 +371,21 @@
         <ul class="input-count-style">
         
         <li>
-        <p align="center" class="count-minus">-</p>
+        <p align="center" class="count-minus" iid="'.$row["cart_id_product"].'">-</p>
         </li>
         
         <li>
-        <p align="center"><input class="count-input" maxlength="3" type="text" value="'.$row["cart_count"].'"/></p>
+        <p align="center"><input id="input-id'.$row["cart_id_product"].'"class="count-input" maxlength="3" type="text" value="'.$row["cart_count"].'" iid="'.$row["cart_id_product"].'"/></p>
         </li>
         
         <li>
-        <p align="center" class="count-plus">+</p>
+        <p align="center" class="count-plus" iid="'.$row["cart_id_product"].'">+</p>
         </li>
         
         </ul>
         </div>
         
-        <div class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p>'.$int.' грн</p></div>
+        <div id="tovar'.$row["cart_id_product"].'" class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p price="'.$row["cart_price"].'">'.group_numerals($int).' грн</p></div>
         <div class="delete-cart"><a href="cart.php?id='.$row["cart_id_product"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
         
         <div id="bottom-cart-line"></div>
@@ -398,7 +398,7 @@
             while ($row = mysql_fetch_array($result));
             
             echo '
-            <h2 class="itog-price" align="right">Итого: <strong>'.$all_price.'</strong> грн</h2>
+            <h2 class="itog-price" align="right">Итого: <strong>'.group_numerals($all_price).'</strong> грн</h2>
             <p align="right" class="button-next" ><a href="cart.php?action=confirm">Далее</a></p>            
             ';
         }

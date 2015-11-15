@@ -466,4 +466,108 @@ function loadcart(){
     return groupprice;
     }
 
+$('.count-minus').click(function(){
+
+  var iid = $(this).attr("iid");      
+ 
+ $.ajax({
+  type: "POST",
+  url: "/include/count-minus.php",
+  data: "id="+iid,
+  dataType: "html",
+  cache: false,
+  success: function(data) {   
+  $("#input-id"+iid).val(data);  
+  loadcart();
+  
+  // переменная с ценной продукта
+  var priceproduct = $("#tovar"+iid+" > p").attr("price"); 
+  // Цену умножаем на колличество
+  result_total = Number(priceproduct) * Number(data);
+ 
+  $("#tovar"+iid+" > p").html(fun_group_price(result_total)+" руб");
+  $("#tovar"+iid+" > h5 > .span-count").html(data);
+  
+  itog_price();
+      }
+});
+  
+});
+
+$('.count-plus').click(function(){
+
+  var iid = $(this).attr("iid");      
+  
+ $.ajax({
+  type: "POST",
+  url: "/include/count-plus.php",
+  data: "id="+iid,
+  dataType: "html",
+  cache: false,
+  success: function(data) {   
+  $("#input-id"+iid).val(data);  
+  loadcart();
+  
+  // переменная с ценной продукта
+  var priceproduct = $("#tovar"+iid+" > p").attr("price"); 
+  // Цену умножаем на колличество
+  result_total = Number(priceproduct) * Number(data);
+ 
+  $("#tovar"+iid+" > p").html(fun_group_price(result_total)+" руб");
+  $("#tovar"+iid+" > h5 > .span-count").html(data);
+  
+  itog_price();
+      }
+});
+  
+});
+
+ $('.count-input').keypress(function(e){
+    
+ if(e.keyCode==13){
+	   
+ var iid = $(this).attr("iid");
+ var incount = $("#input-id"+iid).val();        
+ 
+ $.ajax({
+  type: "POST",
+  url: "/include/count-input.php",
+  data: "id="+iid+"&count="+incount,
+  dataType: "html",
+  cache: false,
+  success: function(data) {
+  $("#input-id"+iid).val(data);  
+  loadcart();
+    
+  // переменная с ценной продукта
+  var priceproduct = $("#tovar"+iid+" > p").attr("price"); 
+  // Цену умножаем на колличество
+  result_total = Number(priceproduct) * Number(data);
+
+
+  $("#tovar"+iid+" > p").html(fun_group_price(result_total)+" руб");
+  $("#tovar"+iid+" > h5 > .span-count").html(data);
+  itog_price();
+
+      }
+}); 
+  }
+});
+
+function  itog_price(){
+ 
+ $.ajax({
+  type: "POST",
+  url: "/include/itog_price.php",
+  dataType: "html",
+  cache: false,
+  success: function(data) {
+
+  $(".itog-price > strong").html(data);
+
+}
+}); 
+       
+}
+
 });
