@@ -6,6 +6,7 @@
     //unset($_SESSION['auth']);
     
     $id = clear_string($_GET["id"]);
+   
     $action = clear_string($_GET["action"]);
     
     switch ($action) {

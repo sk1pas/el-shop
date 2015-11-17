@@ -161,9 +161,9 @@ $search = clear_string($_GET["q"]);
             <div class="block-images-grid">
             <img src="'.$img_path.'" width="'.$width.'" height="'.$height.'"/>
             </div>
-            <p class="style-title-grid"><a href="">'.$row["title"].'</a></p>
+            <p class="style-title-grid"><a href="view_content.php?id='.$row["products_id"].'">'.$row["title"].'</a></p>
             <ul class="reviews-and-counts-grid">
-            <li><img src="/images/eye-icon.png"/><p>0</p></li>
+            <li><img src="/images/eye-icon.png"/><p>'.$row["count"].'</p></li>
             <li><img src="/images/comment-icon.png"/><p>0</p></li>
             </ul>
             <a class="add-cart-style-grid" href="" tid="'.$row["products_id"].'"></a>
@@ -219,11 +219,11 @@ $search = clear_string($_GET["q"]);
             </div>                    
             
             <ul class="reviews-and-counts-list">
-            <li><img src="/images/eye-icon.png"/><p>0</p></li>
+            <li><img src="/images/eye-icon.png"/><p>'.$row["count"].'</p></li>
             <li><img src="/images/comment-icon.png"/><p>0</p></li>
             </ul>
             
-            <p class="style-title-list"><a href="">'.$row["title"].'</a></p>
+            <p class="style-title-list"><a href="view_content.php?id='.$row["products_id"].'">'.$row["title"].'</a></p>
             
             <a class="add-cart-style-list" href="" tid="'.$row["products_id"].'"></a>
             <p class="style-price-list"><strong>'.group_numerals($row["price"]).'</strong> грн</p>
