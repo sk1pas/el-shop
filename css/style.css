@@ -1703,3 +1703,26 @@
     background: url(../images/button-buy-click.png) no-repeat;
 }
 
+#block-img-slide {
+    height: 85px;
+    width: auto;
+}
+
+#block-img-slide li{
+    padding: 3px;
+    float: left;
+    margin-left: 10px;
+    border: 1px solid #DBDBDB;
+    cursor: pointer;
+}
+
+#block-img-slide li:hover{    
+    border: 1px solid black;    
+}
+
+#block-img-slide a{    
+    height: 73px;
+    display: block;    
+}
+
+
