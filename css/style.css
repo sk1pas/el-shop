@@ -1739,4 +1739,110 @@ div.tabs_content > div {padding:10px;}
     margin-top: 5px;
 }
 
+#link-send-review a{
+    text-decoration: none;
+    font: bold 13px tahoma;
+    border-bottom: 1px dashed #EF662B;
+    color: #EF662B;
+}
 
+#link-send-review a:hover{    
+    border-bottom: none;    
+}
+
+.block-reviews {
+    border-bottom: 1px dashed #d8d8d8;
+    margin-top: 20px;    
+}
+
+.block-reviews img{
+    float: left;
+    margin-left: 15px;
+    margin-top: 3px;
+}
+
+.author-date {
+    font: 14px tahoma;
+    margin-left: 20px;
+    color: #8c8c8c;
+}
+
+.textrev {
+    margin-left: 50px;
+    margin-top: 0px;
+    margin-right: 100px;
+    font: 14px tahoma;
+}
+
+.text-comment{
+    font: 15px tahoma;    
+}
+
+#send-review {
+    display: none;
+    width: 400px;
+    height: 450px;
+}
+
+#title-review {
+    font: 14px tahoma;
+    margin-right: 50px;
+    color: #8c8c8c;
+}
+
+#send-review input{
+    width: 234px;
+    height: 25px;
+    margin-right: 50px;
+    margin-top: 15px;
+    border: 1px solid #DBDBDB;
+}
+
+#send-review textarea{
+    width: 230px;
+    height: 70px;
+    margin-right: 50px;    
+    border: 1px solid #DBDBDB;
+}
+
+#label-name {
+    font: 14px tahoma;
+    margin-right: 10px;
+}
+
+#label-good {
+    position: absolute;
+    font: 14px tahoma;
+    margin-left: -100px;
+}
+
+#label-bad {
+    position: absolute;
+    font: 14px tahoma;
+    margin-left: -93px;
+}
+
+#label-comment {
+    position: absolute;
+    font: 14px tahoma;
+    margin-left: -106px;
+}
+
+#reload-img {
+    display: none;
+    margin-top: 35px;
+    margin-left: 295px;
+}
+
+#button-send-review {
+    cursor: pointer;
+    background: url(../images/button-send.png) no-repeat;
+    width: 81px;
+    height: 31px;
+    margin-top: 25px;
+    margin-left: 270px;
+}
+
+#button-send-review:active {
+    background: url(../images/button-send-active.png) no-repeat;
+}

@@ -1,0 +1,5 @@
+include/add_review.php
+
+$name = clear_string($_POST['name']); etc.
+
+----------------------------------------------

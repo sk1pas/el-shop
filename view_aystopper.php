@@ -170,6 +170,11 @@ If ($temp[0] > 0)
                 $height = 200;                
             }
             
+            //Количество отзывов
+            $query_reviews = mysql_query("SELECT * FROM table_reviews WHERE products_id = {$row["products_id"]} AND moderat = '1'",$link);
+            if ($query_reviews != ''){
+            $count_reviews = mysql_num_rows($query_reviews);
+            }else {$count_reviews = '0';}
             
             echo '
             <li>
@@ -179,7 +184,7 @@ If ($temp[0] > 0)
             <p class="style-title-grid"><a href="view_content.php?id='.$row["products_id"].'">'.$row["title"].'</a></p>
             <ul class="reviews-and-counts-grid">
             <li><img src="/images/eye-icon.png"/><p>'.$row["count"].'</p></li>
-            <li><img src="/images/comment-icon.png"/><p>0</p></li>
+            <li><img src="/images/comment-icon.png"/><p>'.$count_reviews.'</p></li>
             </ul>
             <a class="add-cart-style-grid" href="" tid="'.$row["products_id"].'"></a>
             <p class="style-price-grid"><strong>'.group_numerals($row["price"]).'</strong> грн</p>
@@ -226,6 +231,11 @@ If ($temp[0] > 0)
                 $height = 70;                
             }
             
+            //Количество отзывов
+            $query_reviews = mysql_query("SELECT * FROM table_reviews WHERE products_id = {$row["products_id"]} AND moderat = '1'",$link);
+            if ($query_reviews != ''){
+            $count_reviews = mysql_num_rows($query_reviews);
+            }else {$count_reviews = '0';}
             
             echo '
             <li>
@@ -235,7 +245,7 @@ If ($temp[0] > 0)
             
             <ul class="reviews-and-counts-list">
             <li><img src="/images/eye-icon.png"/><p>'.$row["count"].'</p></li>
-            <li><img src="/images/comment-icon.png"/><p>0</p></li>
+            <li><img src="/images/comment-icon.png"/><p>'.$count_reviews.'</p></li>
             </ul>
             
             <p class="style-title-list"><a href="view_content.php?id='.$row["products_id"].'">'.$row["title"].'</a></p>
