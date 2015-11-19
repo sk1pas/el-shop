@@ -1846,3 +1846,28 @@ div.tabs_content > div {padding:10px;}
 #button-send-review:active {
     background: url(../images/button-send-active.png) no-repeat;
 }
+
+#block-like {
+    width: 150px;    
+    margin-top: -10px;
+}
+
+#likegood {
+    float: left;
+    cursor: pointer;
+    border: 1px solid #c5c5c5;
+    background-color: #eeeeee;
+    padding: 3px 4px;
+    font: 13px tahoma;
+    margin: 0;
+}
+
+#likegood:hover{    
+    background-color: #f2f2f2;    
+}
+
+#likegoodcount {
+    margin: 4px 8px;
+    font: 13px tahoma;
+    display: inline-block;
+}

@@ -581,37 +581,37 @@ $('#button-send-review').click(function(){
     if (name != "")
     {
         name_review = '1';
-        $("#name_review").css("bordercolor","#DBDBDB");
+        $("#name_review").css("border-color","#DBDBDB");
     }else {
         name_review = '0';
-        $("#name_review").css("bordercolor","#fdb6b6");
+        $("#name_review").css("border-color","#fdb6b6");
     }
     
     if (good != "")
     {
         good_review = '1';
-        $("#good_review").css("bordercolor","#DBDBDB");
+        $("#good_review").css("border-color","#DBDBDB");
     }else {
         good_review = '0';
-        $("#good_review").css("bordercolor","#fdb6b6");
+        $("#good_review").css("border-color","#fdb6b6");
     }
     
     if (bad != "")
     {
         bad_review = '1';
-        $("#bad_review").css("bordercolor","#DBDBDB");
+        $("#bad_review").css("border-color","#DBDBDB");
     }else {
         bad_review = '0';
-        $("#bad_review").css("bordercolor","#fdb6b6");
+        $("#bad_review").css("border-color","#fdb6b6");
     }
     
     if (good != "")
     {
         good_review = '1';
-        $("#good_review").css("bordercolor","#DBDBDB");
+        $("#good_review").css("border-color","#DBDBDB");
     }else {
         good_review = '0';
-        $("#good_review").css("bordercolor","#fdb6b6");
+        $("#good_review").css("border-color","#fdb6b6");
     }
     
     //Глобальная проверка и отправка отзыва
@@ -634,6 +634,28 @@ $('#button-send-review').click(function(){
     }
 });
 
-
+$('#likegood').click(function() {
+    
+    var tid = $(this).attr("tid");
+    
+    $.ajax({
+        type: "POST",
+        url: "/include/like.php",
+        data: "id="+tid,
+        dataType: "html",
+        cache: false,
+        success: function(data) {
+            
+            if (data == 'no')
+            {
+                alert('Вы уже голосовали');
+            }
+            else
+            {
+                $("#likegoodcount").html(data);
+            }
+        }
+});
+});
 
 });
