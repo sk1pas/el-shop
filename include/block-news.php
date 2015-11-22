@@ -1,3 +1,6 @@
+<?php
+	defined('myyshop') or die('Доступа нет!');
+?>
 <div id="block-news">
 <center><img id="news-prev" src="/images/img-prev.png"/></center>
 

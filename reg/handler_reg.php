@@ -1,6 +1,7 @@
 <?php
  if($_SERVER["REQUEST_METHOD"] == "POST")
 { 
+    define('myyshop', true);
  session_start();
  define('myeshop', true);
  include("../include/db_connect.php");

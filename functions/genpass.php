@@ -1,5 +1,5 @@
 <?php
-
+defined('myyshop') or die('Доступа нет!');
 $number = 7;
 
     $arr = array('a','b','c','d','e','f',

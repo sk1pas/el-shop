@@ -1,5 +1,5 @@
 <?php
-	
+	defined('myyshop') or die('Доступа нет!');
  if ($_SESSION['auth'] != 'yes_auth' && $_COOKIE["rememberme"])
   {
     

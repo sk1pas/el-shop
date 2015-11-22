@@ -1,3 +1,6 @@
+<?php
+	defined('myyshop') or die('Доступа нет!');
+?>
 <div id="block-random-tovar">
 <ul>
 <?php

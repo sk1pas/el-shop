@@ -1,4 +1,5 @@
 <?php
+defined('myyshop') or die('Доступа нет!');
 $db_host     = 'localhost';
 $db_user     = 'admin';
 $db_pass     = '11223344';

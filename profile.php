@@ -1,4 +1,5 @@
 <?php
+    define('myyshop', true);
 	session_start();
     
     if($_SESSION['auth'] == 'yes_auth')

@@ -1,3 +1,6 @@
+<?php
+	defined('myyshop') or die('Доступа нет!');
+?>
 <div id="block-footer">
 <div id="bottom-line"></div>
 <div id="footer-phone">

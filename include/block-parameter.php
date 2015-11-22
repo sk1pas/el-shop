@@ -1,3 +1,6 @@
+<?php
+	defined('myyshop') or die('Доступа нет!');
+?>
 <script type="text/javascript">
 $(document).ready(function() {
     $('#blocktrackbar').trackbar ({
