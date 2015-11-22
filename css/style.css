@@ -1608,7 +1608,7 @@
 }
 
 #block-breadcrumbs-and-rating{
-    height: 50px;
+    height: 60px;
     margin-top: 10px;
     border-bottom: 1px solid #EEEEEE;
 }
@@ -1849,25 +1849,76 @@ div.tabs_content > div {padding:10px;}
 
 #block-like {
     width: 150px;    
-    margin-top: -10px;
+    margin-top: -10px;    
 }
 
 #likegood {
     float: left;
-    cursor: pointer;
-    border: 1px solid #c5c5c5;
-    background-color: #eeeeee;
-    padding: 3px 4px;
-    font: 13px tahoma;
+    cursor: pointer;    
+    background: url(/images/like-icon.png);
+    width: 30px;
+    height: 30px;
     margin: 0;
 }
 
 #likegood:hover{    
-    background-color: #f2f2f2;    
+    background: url(/images/like-icon-hover.png);   
+}
+
+#likegood:active{    
+    background: url(/images/like-icon-active.png);   
 }
 
 #likegoodcount {
     margin: 4px 8px;
     font: 13px tahoma;
     display: inline-block;
+}
+
+#block-random-tovar {
+    height: 150px;
+    padding-top: 15px;
+    clear: both;
+}
+
+#block-random-tovar li {
+    float: left;
+    width: 250px;
+    height: 150px;
+    margin-left: 5px;
+}
+
+#block-random-tovar img{
+    float: left;
+    margin-right: 8px;
+}
+
+.random-title {
+    font: 15px tahoma;
+    color:  #276FC8;
+}
+
+.random-title:hover {
+    text-decoration: none;
+}
+
+.random-reviews {
+    font: 13px tahoma;
+    color: #434343;
+    margin: 5px 0;
+}
+
+.random-price {
+    margin: 0px;
+    font: bold 18px tahoma;
+}
+
+.random-add-cart {
+    width: 87px;
+    height: 26px;
+    margin-top: 10px;
+    margin-right: 0px;
+    cursor: pointer;
+    background: url(/images/button-pay.png);
+    float: left;
 }

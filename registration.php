@@ -238,7 +238,8 @@ $(document).ready(function() {
 </form>
 
 </div>
-<?php	
+<?php		
+    include("include/block-random.php");
     include("include/block-footer.php");          
 ?>
 </div>

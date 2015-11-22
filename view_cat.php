@@ -332,6 +332,7 @@ if ($total > 1)
 
 </div>
 <?php	
+    include("include/block-random.php");	
     include("include/block-footer.php");          
 ?>
 </div>

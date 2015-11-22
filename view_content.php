@@ -96,7 +96,7 @@
             <p id="nav-breadcrumbs"><a href="veiw_mobile.php">Мобильные телефоны</a> \ <span>'.$row1["brand"].'</span></p>
             
             <div id="block-like">
-            <p id="likegood" tid="'.$id.'">Нравится</p>
+            <p id="likegood" tid="'.$id.'"></p>
             <p id="likegoodcount">'.$row1["yes_like"].'</p>
             </div>
             
@@ -233,6 +233,7 @@
 
 </div>
 <?php	
+    include("include/block-random.php");	
     include("include/block-footer.php");          
 ?>
 </div>
