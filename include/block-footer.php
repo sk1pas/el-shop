@@ -29,7 +29,7 @@
 <li><a href="">О нас</a></li>
 <li><a href="">Вакансии</a></li>
 <li><a href="">Партнерам</a></li>
-<li><a href="">Контакты</a></li>
+<li><a href="feedback.php">Контакты</a></li>
 </ul>
 
 </div>

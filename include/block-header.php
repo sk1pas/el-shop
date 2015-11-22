@@ -7,7 +7,7 @@
 <li>Ваш город - <span>Харьков</span></li>
 <li><a href="o-nas.php">О нас</a></li>
 <li><a href="magaziny.php">Магазины</a></li>
-<li><a href="contacts.php">Контакты</a></li>
+<li><a href="feedback.php">Контакты</a></li>
 </ul>
 <!-- Вход и Регистрация -->
 <?php

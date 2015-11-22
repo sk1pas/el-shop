@@ -918,7 +918,7 @@
     height: 33px;
     cursor: pointer;
     margin-top: -15px;
-    margin-right: 15px;
+    margin-right: 140px;
 }
 
 #form_submit:active {
@@ -1921,4 +1921,50 @@ div.tabs_content > div {padding:10px;}
     cursor: pointer;
     background: url(/images/button-pay.png);
     float: left;
+}
+
+#block-feedback {
+    height: 450px;
+}
+
+#feedback {
+    margin-top: 50px;
+}
+
+#feedback li{
+    margin-top: 10px;
+}
+
+#feedback input{
+    height: 30px;
+    width: 300px;
+    font: 17px  tahoma;
+    margin-left: 200px;
+    border-left: 1px solid #ABABAB;
+    border-top: 1px solid #ABABAB;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding-left: 5px;
+}
+
+#feedback label{
+    font: 14px tahoma;
+    color: #464648;
+    position: absolute;
+    margin-top: 7px;
+}
+
+#feedback textarea{
+    height: 180px;
+    width: 450px;
+    font: 17px tahoma;
+    margin-left: 200px;
+    border-left: 1px solid #ABABAB;
+    border-top: 1px solid #ABABAB;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;    
+}
+
+#feedback input:focus, #feedback textarea:focus{
+    border: 1px solid #C4E1EB;
 }
