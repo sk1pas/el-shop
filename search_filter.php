@@ -100,8 +100,7 @@ if (!empty($check_brand) OR !empty($end_price))
 <li>Вид:</li>
 <li><img id="style-grid" src="/images/icon-grid.png"/></li>
 <li><img id="style-list" src="/images/icon-list.png"/></li>
-<li>Сортировать:</li>
-<li><a id="select-sort">'.$sort_name.'</a>
+<!-- <li><a id="select-sort">'.$sort_name.'</a>
 <ul id="sorting-list">
 <li><a href="view_cat.php?'.$catlink.'type='.$type.'&sort=price-asc">От дешевых к дорогим</a></li>
 <li><a href="view_cat.php?'.$catlink.'type='.$type.'&sort=price-desc">От дорогих к дешевым</a></li>
@@ -109,7 +108,7 @@ if (!empty($check_brand) OR !empty($end_price))
 <li><a href="view_cat.php?'.$catlink.'type='.$type.'&sort=news">Новинки</a></li>
 <li><a href="view_cat.php?'.$catlink.'type='.$type.'&sort=brand">от А до Я</a></li>
 </ul>
-</li>
+</li>-->
 </ul>
 </div>
 

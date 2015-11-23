@@ -77,11 +77,6 @@ $search = clear_string($_GET["q"]);
 <?php
 	if (strlen($search) >=2 && strlen($search) < 200)
     {
-?>
-
-<ul id="block-tovar-grid">
-
-<?php
 
 	$num = 6; // «десь указываем сколько хотим выводить товаров.
     $page = (int)$_GET['page'];              
@@ -132,6 +127,7 @@ $search = clear_string($_GET["q"]);
 </li>
 </ul>
 </div>
+<ul id="block-tovar-grid">
     ';
     
 	$result = mysql_query("SELECT * FROM table_products  WHERE title LIKE '%$search%' AND visible='1' ORDER BY $sorting $qury_start_num",$link);
