@@ -111,3 +111,139 @@ body {
     margin-left: 10px;
     position: absolute;
 }
+
+#block-info {
+    height: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#count-style {
+    margin-top: 12px;
+    font: 14px tahoma;
+    margin-left: 10px;
+    position: absolute;
+}
+
+#block-tovar{
+    margin-top: 10px;
+}
+
+#block-tovar li{
+    height: 260px;
+    width: 230px;
+    float: left;
+    margin-left: 10px;
+}
+
+#block-tovar p{
+    margin-top: 10px;
+    font: 15px sans-serif;
+    text-align: center;
+}
+
+.delete{
+    font:bold 13px sans-serif;
+    color: #D6533C;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.green{
+    font:bold 13px sans-serif;
+    color: green;
+}
+
+.pstrnav {
+    height: 40px;
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.pstrnav li{
+   float: left;
+   margin-top: 10px;
+}
+.pstrnav a{
+    font: 17px sans-serif;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.pstrnav a:hover{
+    color: #E26029;
+}
+
+a.pstr-prev, a.pstr-next{
+    color: #006289;
+    font: 14px arial;
+    text-decoration: underline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a.pstr-prev:hover, a.pstr-next:hover{
+    text-decoration: none;
+}
+
+.pstrnav a.pstr-active{
+    color: #D95D27;
+    font-weight: bold;
+}
+
+.pstrnav p.nav-point{
+    text-align: center;
+    font:14px sans-serif; 
+    margin-top: 5px;  
+} 
+
+#footerfix{
+    clear: both;
+}
+
+#options-list > li{
+    float: left;
+    margin-left: 10px;
+    font: 14px sans-serif;
+    margin-top: 13px;   
+}
+
+#options-list > li > a{
+    color: #748996;
+}
+
+#list-links{
+    background-color: white; 
+    border: 1px solid #A3C0D2;
+    position: absolute;
+    display: none;
+    width: 450px;
+   padding-top: 5px;
+   padding-bottom: 7px;
+   height: auto;
+   z-index: 1;
+}
+
+#list-links > ul{
+   width: 150px;
+   float: left;
+}
+
+#list-links > ul > li{
+   margin-top: 3px;
+   margin-left: 10px;
+}
+
+#list-links > ul > li > a{
+   font: 15px sans-serif;
+   text-decoration: none; 
+   color: black;
+}
+
+#list-links > ul > li > a:hover{
+   text-decoration: underline; 
+}
