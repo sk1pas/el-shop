@@ -184,6 +184,8 @@ do
 <div id="block-info">
 
 <p id="count-style">Всего товаров - <?php echo $all_count_result;?><strong></strong></p>
+<p align="right" id="add-style"> <a href="add_product.php">Добавить товар</a></p>
+
 </div>
 
  <ul id="block-tovar">

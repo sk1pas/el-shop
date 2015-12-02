@@ -3,3 +3,7 @@ include/add_review.php
 $name = clear_string($_POST['name']); etc.
 
 ----------------------------------------------
+
+admin/add_product.php
+
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>

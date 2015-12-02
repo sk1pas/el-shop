@@ -6,6 +6,8 @@
     include("include/auth_cookie.php");
     //unset($_SESSION['auth']);
     
+    $seoquery = mysql_query("SELECT seo_words,seo_description FROM table_products WHERE products_id='$id' AND visible = 1",$link);
+    
     $id = clear_string($_GET["id"]);   
     
     if ($id != $_SESSION['countid'])
@@ -80,7 +82,7 @@
                 $width = intval($ratio*$width);
                 $height = intval($ratio*$height);
             }else {
-                $img_path = "/images/no-image";
+                $img_path = "/images/no-image.png";
                 $width = 110;
                 $height = 200;
             }
