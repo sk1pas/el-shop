@@ -532,3 +532,40 @@ a.pstr-prev:hover, a.pstr-next:hover{
 .links-actions{
     margin-right: 15px;
 }
+#cat_products{
+    margin-top: 20px;
+}
+#cat_products li{
+    margin-top: 15px;
+}
+#cat_products label{
+    position: absolute;
+    margin-left: 15px;
+    font: 14px arial;
+    margin-top: 3px;
+}
+#cat_products select{
+    margin-left: 150px;
+    width: 400px;
+    height: 350px;
+}
+#cat_products input{
+    margin-left: 150px;
+    width: 300px;
+    height: 25px;
+}
+#cat_products div{
+    position: absolute;
+    margin-left: 560px;
+    display: inline-block;
+}
+#cat_products a{
+    font: 14px sans-serif;
+    display: block;
+    margin-top: 4px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#cat_products a:hover{
+    text-decoration: none;
+}

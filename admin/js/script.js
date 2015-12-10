@@ -66,4 +66,31 @@ $('.del-img').click(function(){
     });
 });
 
+$('.delete-cat').click(function(){
+    
+    var selectid = $("#cat_type option:selected").val();
+    
+    if (!selectid)
+    {
+        $("#cat_type").css("borderColor","#f5a4a4");
+    }else
+    {
+    $.ajax({
+        type: "POST",
+        url: "./actions/delete-category.php",
+        data: "id="+selectid,
+        dataType: "html",
+        cache: false,
+        success: function(data) {
+            
+            if (data == "delete")
+            {
+                $("#cat_type option:selected").remove();
+            }
+        }
+    });
+    }
+    
+});
+
 });
