@@ -569,3 +569,48 @@ a.pstr-prev:hover, a.pstr-next:hover{
 #cat_products a:hover{
     text-decoration: none;
 }
+#count-clients{
+    position: absolute;
+    font: 15px sans-serif;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+.block-clients{
+    border-bottom: 1px solid #e0e0e0;
+    min-height: 40px;
+    height: auto;
+    cursor: pointer;
+}
+.block-clients > ul{
+    display: none;
+    margin-bottom: 15px;
+}
+.block-clients > ul > li{
+    margin-left: 20px;
+    padding-top: 4px;
+    font: 14px sans-serif;
+}
+.block-clients > ul > li > strong{
+    color: #323232;
+    font-size: 12px;
+}
+.client-datetime{
+    font: 14px sans-serif;
+    margin-left: 10px;
+    color: #767676;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.client-email{
+    font: 14px sans-serif;
+    margin-left: 10px;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 10px;  
+}
+.client-links{
+    font: 14px sans-serif;  
+    position: absolute; 
+    margin-left: 580px; 
+    margin-top: -36px;
+}

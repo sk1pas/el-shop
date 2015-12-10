@@ -92,5 +92,7 @@ $('.delete-cat').click(function(){
     }
     
 });
-
+$('.block-clients').click(function(){
+    $(this).find('ul').slideToggle(300);
+});
 });
