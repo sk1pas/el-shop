@@ -614,3 +614,74 @@ a.pstr-prev:hover, a.pstr-next:hover{
     margin-left: 580px; 
     margin-top: -36px;
 }
+.block-news{
+    border-bottom: 1px solid #e0e0e0;    
+    padding: 10px;
+}
+.block-news h3{
+    font: 19px sans-serif;
+    margin: 0;
+}
+.block-news span{
+    display: block;
+    font: 12px sans-serif;
+    margin-top: 5px;
+}
+.block-news p{
+    font: 15px sans-serif;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+#add-style{
+    margin-top: 12px;
+    margin-left: 618px;
+    position: absolute;
+}
+#add-style > a{
+    font: 13px arial;
+    color: black;
+    text-decoration: none;
+    border: 1px solid #FFDACA;
+    background-color: #FFE7E7;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+#add-style > a:hover{
+    border: 1px solid #ffbfa4;
+}
+#news{
+    width: 400px;
+    height: 250px;
+    display: none;
+}
+#block-input{
+    height: 200px;
+}
+#news label {
+    display: block;
+    font: 15px sans-serif;
+    margin-top: 15px;
+}
+#news input{
+    width: 300px;
+    height: 29px;
+    margin-left: 10px;
+    border: 1px solid #e0e0e0;
+}
+#news input#submit_news{
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    border: 1px solid #d7d7d7;
+    background-color: #e8e8e8;
+    cursor: pointer;
+}
+#news textarea{
+    width: 296px;
+    height: 120px;
+    position: absolute;
+    margin-left: 15px;
+    border: 1px solid #e0e0e0;
+}
