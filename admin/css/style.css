@@ -685,3 +685,55 @@ a.pstr-prev:hover, a.pstr-next:hover{
     margin-left: 15px;
     border: 1px solid #e0e0e0;
 }
+#info-admin label{
+    position: absolute;
+    margin-left: 15px;
+    font: 14px arial;
+    margin-top: 6px;
+}
+#info-admin li{
+    margin-top: 10px;
+}
+#info-admin input{
+    margin-left: 200px;
+    height: 30px;
+    width: 350px;
+    font: 17px sans-serif;
+    border-left: 1px solid #ababab;
+    border-top: 1px solid #ababab;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding-left: 5px;
+}
+.privilege{
+    float: left;
+    margin-left: 10px;
+}
+.privilege li{
+    margin-left: 15px;
+}
+.privilege h3{
+    font: bold 15px sans-serif;
+}
+.privilege label{
+    font: 14px sans-serif;
+}
+.block-privilege{
+    height: 120px;
+}
+#title-privilege{
+    margin-left: 15px;
+    font-family: sans-serif;
+}
+#link-privilege{
+    margin-left: 15px;
+}
+#link-privilege a{
+    font: 13px sans-serif;
+    text-decoration: underline;
+    color: #d15019;
+    cursor: pointer;
+}
+#link-privilege a:hover{
+    text-decoration: none;
+}

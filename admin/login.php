@@ -11,9 +11,9 @@
     
     if($login && $pass)
     {
-        // $pass = md5($pass);
-        // $pass = strrev($pass);
-        // $pass = strtolower("mb03foo51".$pass."qj2jjdp9");
+        $pass = md5($pass);
+        $pass = strrev($pass);
+        $pass = strtolower("mb03foo51".$pass."qj2jjdp9");
         
         $result = mysql_query("SELECT * FROM reg_admin WHERE login = '$login' AND pass = '$pass'",$link);
         
