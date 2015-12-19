@@ -90,7 +90,7 @@ echo '
  <TR>
 <TD  align="CENTER" >'.$row["order_datetime"].'</TD>
 <TD  align="CENTER" >'.$row2["title"].'</TD>
-<TD  align="CENTER" >'.$row2["price"].'</TD>
+<TD  align="CENTER" >'.$row2["price"].' грн</TD>
 <TD  align="CENTER" >'.$statuspay.'</TD>
 </TR>
 ';
