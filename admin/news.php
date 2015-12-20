@@ -18,7 +18,9 @@ define('myyshop', true);
     
     if($_POST["submit_news"])
     {
-        if($_POST["news_title"] == "" || $_POST["news_text"] == "")
+        if($_SESSION['add_news'] == '1')
+        {
+            if($_POST["news_title"] == "" || $_POST["news_text"] == "")
         {
             $message = "<p id='form-error'>Заполните все поля</p>";
         }
@@ -32,6 +34,12 @@ define('myyshop', true);
                                     )",$link);
             $message = "<p id='form-success'>Новость добавлена</p>";
         }
+        } else
+        {
+            $msgerror = 'У вас нет прав на добавление новости';
+        }
+        
+        
     }
     
                  
@@ -41,10 +49,16 @@ if (isset($action))
 {
    switch ($action) {
         
-        case 'delete':      
-
-         $delete = mysql_query("DELETE FROM news WHERE id = '$id'",$link);      
-                    
+        case 'delete': 
+        
+        if($_SESSION['delete_news'] == '1')
+        {
+            $delete = mysql_query("DELETE FROM news WHERE id = '$id'",$link);
+        } else
+        {
+            $msgerror = 'У вас нет прав на удаление новости';
+        }  
+           
 	    break;
         
 	} 
@@ -89,6 +103,7 @@ $(document).ready(function(){
 </div>
 
 <?php
+if(isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
 if($message != "") echo $message;
 	$result = mysql_query("SELECT * FROM news ORDER BY id DESC",$link);
     

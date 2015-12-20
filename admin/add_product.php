@@ -18,8 +18,8 @@ define('myyshop', true);
    
    if ($_POST["submit_add"])
     {
- 
-
+ if($_SESSION['add_tovar'] == '1')
+ {
       $error = array();
     
     // Проверка полей
@@ -112,6 +112,10 @@ define('myyshop', true);
 
     
            
+}else
+{
+    $msgerror = 'У вас нет прав на добавление товара';
+}
 }   
 
 ?>

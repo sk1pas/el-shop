@@ -21,9 +21,16 @@ if (isset($action))
 {
    switch ($action) {
         
-        case 'delete':      
+        case 'delete':  
+        if($_SESSION['auth_admin-login'] == 'admin3') 
+        {
+            $delete = mysql_query("DELETE FROM reg_admin WHERE id = '$id'",$link);
+        } else
+        {
+            $msgerror = 'У вас нет прав на удаление администраторов';
+        }
 
-         $delete = mysql_query("DELETE FROM reg_admin WHERE id = '$id'",$link);      
+               
                     
 	    break;
         
@@ -58,7 +65,9 @@ if (isset($action))
 </div>
 
 <?php
-
+if(isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
+if($_SESSION['view_admin'] == '1')
+{
 $result = mysql_query("SELECT * FROM reg_admin ORDER BY id DESC",$link);
  
  If (mysql_num_rows($result) > 0)
@@ -80,6 +89,10 @@ echo '
     ';    
     
 } while ($row = mysql_fetch_array($result));
+}
+} else
+{
+    echo '<p id="form-error" align="center">У вас нет прав на просмотр данного раздела</p>';
 }
 ?>
 

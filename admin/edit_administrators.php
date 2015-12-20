@@ -19,6 +19,9 @@ define('myyshop', true);
     
 if ($_POST["submit_edit"])
 {
+    if($_SESSION['auth_admin_login'] == 'admin3')
+    {
+        
     $error = array();
     
     if (!$_POST["admin_login"]) $error[] = "Укажите логин!";
@@ -47,7 +50,11 @@ if ($_POST["submit_edit"])
           $_SESSION['message'] = "<p id='form-success'>Пользователь успешно изменён!</p>";
  }      
     
-} 
+} else
+{
+    $msgerror = 'У вас нет прав на изменение администраторов';
+}
+}
     
 ?>
 <!DOCTYPE HTML>
@@ -76,6 +83,7 @@ if ($_POST["submit_edit"])
 </div>
 
 <?php
+if(isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
 	if(isset($_SESSION['message']))
     {
         echo $_SESSION['message'];

@@ -22,6 +22,32 @@
             $row = mysql_fetch_array($result);
             
             $_SESSION['auth_admin'] = 'yes_auth';
+            $_SESSION['auth_admin_login'] = $row["login"];
+            // Должность
+    $_SESSION['admin_role'] = $row["role"];
+            // Привилегии
+      // Заказы
+    $_SESSION['accept_orders'] = $row["accept_orders"];
+    $_SESSION['delete_orders'] = $row["delete_orders"];
+    $_SESSION['view_orders'] = $row["view_orders"];
+      // Товары  
+    $_SESSION['delete_tovar'] = $row["delete_tovar"];
+    $_SESSION['add_tovar'] = $row["add_tovar"];
+    $_SESSION['edit_tovar'] = $row["edit_tovar"];
+      // Отзывы
+    $_SESSION['accept_reviews'] = $row["accept_reviews"];
+    $_SESSION['delete_reviews'] = $row["delete_reviews"];    
+     // Клиенты
+    $_SESSION['view_clients'] = $row["view_clients"];
+    $_SESSION['delete_clients'] = $row["delete_clients"]; 
+      // Новости
+    $_SESSION['add_news'] = $row["add_news"]; 
+    $_SESSION['delete_news'] = $row["delete_news"];
+      // Категории
+    $_SESSION['add_category'] = $row["add_category"]; 
+    $_SESSION['delete_category'] = $row["delete_category"];  
+    // Администраторы
+    $_SESSION['view_admin'] = $row["view_admin"];
             
             header("Location: index.php");
         }else

@@ -22,8 +22,13 @@ if (isset($action))
    switch ($action) {
         
         case 'delete':      
-
-         $delete = mysql_query("DELETE FROM reg_user WHERE id = '$id'",$link);      
+        if($_SESSION['delete_clients'] == '1')
+        {
+            $delete = mysql_query("DELETE FROM reg_user WHERE id = '$id'",$link); 
+        }else
+        {
+            $msgerror = '” вас нет прав на удаление клиента';
+        }             
                     
 	    break;
         
@@ -59,7 +64,10 @@ if (isset($action))
 </div>
 
 <?php
-	
+if(isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
+if($_SESSION['view_clients'] == '1')
+{
+
 $num = 10;
 
     $page = strip_tags($_GET['page']);              
@@ -153,7 +161,10 @@ echo '
 </div>
 ';
 }
-
+}else
+{
+    echo '<p id="form-error" align="center">” вас нет прав на просмотр данной страницы</p>';
+}
 ?>
 
 

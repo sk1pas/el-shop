@@ -23,10 +23,16 @@ define('myyshop', true);
             switch ($action) {
                 case 'delete':
                 
-                if(file_exists("../uploads_images/".$_GET["img"]))
+                if($_SESSION['edit_tovar'] == '1')
+                {
+                    if(file_exists("../uploads_images/".$_GET["img"]))
                 {
                     unlink("../uploads_images/".$_GET["img"]);
                 }
+                }else
+                {
+                    $msgerror = 'У вас нет прав на изменение товара';
+                }               
                 
                 break;
             }
@@ -34,7 +40,8 @@ define('myyshop', true);
    
    if ($_POST["submit_save"])
     {
- 
+    if($_SESSION['edit_tovar'] == '1')
+    {
 
       $error = array();
     
@@ -111,7 +118,10 @@ $update = mysql_query("UPDATE table_products SET $querynew WHERE products_id=$id
     
 }
 
-    
+}else
+{
+    $msgerror = 'У вас нет прав на изменение товара';
+}   
            
 }   
 
@@ -363,8 +373,17 @@ echo'
     echo '
     <li id="del'.$result_img["id"].'">
     <img src="'.$img_path.'" width="'.$width.'" height="'.$height.'" title="'.$result_img["image"].'" />
-    <a class="del-img" img_id="'.$result_img["id"].'"></a>
     ';
+    
+    if($_SESSION['edit_tovar'] == '1')
+    {
+       echo'
+            <a class="del-img" img_id="'.$result_img["id"].'"></a>    
+        '; 
+    }
+    
+    echo '</li>';
+    
  }while ($result_img = mysql_fetch_array($query_img));
  }
  

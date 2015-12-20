@@ -85,9 +85,15 @@ if (isset($action))
    $id = (int)$_GET["id"]; 
    switch ($action) {
 
-	    case 'delete':   
-
-          $delete = mysql_query("DELETE FROM table_products WHERE products_id = '$id'",$link);  
+	    case 'delete':
+        
+        if($_SESSION['delete_tovar'] == '1')
+        {
+            $delete = mysql_query("DELETE FROM table_products WHERE products_id = '$id'",$link);
+        } else
+        {
+            $msgerror = 'У вас нет прав на удаление товара';
+        }           
       
 	    break;
         

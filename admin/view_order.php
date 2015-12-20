@@ -23,15 +23,29 @@ define('myyshop', true);
    switch ($action) {
 
 	    case 'accept':
-       
-            $update = mysql_query("UPDATE orders SET order_confirmed='yes' WHERE order_id = '$id'",$link);  
-     
-	    break;
+        
+        if($_SESSION['accept_orders'] == '1')
+        {
+            $update = mysql_query("UPDATE orders SET order_confirmed='yes' WHERE order_id = '$id'",$link);
+        }else
+        {
+            $msgerror = 'У вас нет прав на подтсверждение заказов';
+        }   
+              
+     	 break;
         
         case 'delete':        
         
+        if($_SESSION['delete_orders'] == '1')
+        {
            $delete = mysql_query("DELETE FROM orders WHERE order_id = '$id'",$link); 
-           header("Location: orders.php");     
+           header("Location: orders.php"); 
+        }else
+        {
+            $msgerror = 'У вас нет прав на удаление заказов';
+        }
+        
+                
         
 	    break;        
 	}     
@@ -64,6 +78,12 @@ define('myyshop', true);
 </div>
 
 <?php
+
+if(isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
+
+if($_SESSION['view_orders'] == '1')
+{
+
     $result = mysql_query("SELECT * FROM orders WHERE order_id = '$id'",$link);
  
  If (mysql_num_rows($result) > 0)
@@ -78,7 +98,6 @@ if ($row["order_confirmed"] == 'yes')
 {
     $status = '<span class="red">Не обработан</span>';    
 }
-
 
  echo '
   <p class="view-order-link" ><a class="green" href="view_order.php?id='.$row["order_id"].'&action=accept" >Подтвердить заказ</a> | <a class="delete" rel="view_order.php?id='.$row["order_id"].'&action=delete" >Удалить заказ</a></p>
@@ -150,6 +169,11 @@ echo '
  ';   
     
 } while ($row = mysql_fetch_array($result));
+}
+
+} else
+{
+    echo '<p id="form-error" align="center">У вас нет прав на просмотр данного раздела</p>';
 }
 ?>
 

@@ -16,6 +16,12 @@ define('myyshop', true);
     include("include/db_connect.php");
     include("include/functions.php");  
     
+    if ($_POST["submit_add"])
+{
+    if ($_SESSION['auth_admin_login'] == 'admin3')
+    {
+
+    $error = array();
     
     if ($_POST["admin_login"])
     {
@@ -76,8 +82,12 @@ define('myyshop', true);
 						)",$link);
                    
           $_SESSION['message'] = "<p id='form-success'>Пользователь успешно добавлен!</p>";
- }   
- 
+ } 
+ }  else
+    {
+       $msgerror = 'У вас нет прав на добавление администраторов!'; 
+    } 
+ }
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -105,6 +115,7 @@ define('myyshop', true);
 </div>
 
 <?php
+if(isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
 	if(isset($_SESSION['message']))
     {
         echo $_SESSION['message'];
