@@ -11,7 +11,7 @@ define('myyshop', true);
         header("Location: login.php");
     }
     
-    $_SESSION['urlpage'] = "<a href='index.php'>Главная</a> \ <a href='news.php'>Новости</a>";
+    $_SESSION['urlpage'] = "<a href='index.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <a href='news.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>";
     
     include("include/db_connect.php");
     include("include/functions.php");
@@ -22,7 +22,7 @@ define('myyshop', true);
         {
             if($_POST["news_title"] == "" || $_POST["news_text"] == "")
         {
-            $message = "<p id='form-error'>Заполните все поля</p>";
+            $message = "<p id='form-error'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ</p>";
         }
         else
         {
@@ -32,11 +32,11 @@ define('myyshop', true);
                                     '".$_POST["news_text"]."',
                                     NOW()
                                     )",$link);
-            $message = "<p id='form-success'>Новость добавлена</p>";
+            $message = "<p id='form-success'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</p>";
         }
         } else
         {
-            $msgerror = 'У вас нет прав на добавление новости';
+            $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         }
         
         
@@ -56,7 +56,7 @@ if (isset($action))
             $delete = mysql_query("DELETE FROM news WHERE id = '$id'",$link);
         } else
         {
-            $msgerror = 'У вас нет прав на удаление новости';
+            $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         }  
            
 	    break;
@@ -73,7 +73,7 @@ if (isset($action))
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="jquery_confirm/jquery_confirm.css" rel="stylesheet" type="text/css" /> 
     <link href="fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />      
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> 
     <script type="text/javascript" src="js/script.js"></script> 
     <script type="text/javascript" src="jquery_confirm/jquery_confirm.js"></script>  
     <script type="text/javascript" src="fancybox/jquery.fancybox.js"></script>    
@@ -84,7 +84,7 @@ $(document).ready(function(){
 });
 </script>
 
-	<title>Панель управления - Новости</title>
+	<title>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 
 <body>
@@ -97,9 +97,9 @@ $(document).ready(function(){
 ?>
 <div id="block-content">
 <div id="block-parameters">
-<p id="count-clients">Всего новостей - <strong><?php echo $result_count;?></strong></p>
+<p id="count-clients">пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - <strong><?php echo $result_count;?></strong></p>
 
-<p align="right" id="add-style"><a class="news" href="#news">Добавить новость</a></p>
+<p align="right" id="add-style"><a class="news" href="#news">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></p>
 </div>
 
 <?php
@@ -120,7 +120,7 @@ if($message != "") echo $message;
             <span>'.$row["date"].'</span>
             <p>'.$row["text"].'</p>
             
-            <p class="link-action" align="right"><a class="delete" rel="news.php?id='.$row["id"].'&action=delete">Удалить</a></p>
+            <p class="link-action" align="right"><a class="delete" rel="news.php?id='.$row["id"].'&action=delete">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></p>
             
             </div>
             
@@ -131,11 +131,11 @@ if($message != "") echo $message;
 <div id="news">
 <form method="post">
 <div id="block-input">
-<label>Заголовок <input type="text" name="news_title" /></label>
-<label>Описание <textarea name="news_text" ></textarea></label>
+<label>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <input type="text" name="news_title" /></label>
+<label>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ <textarea name="news_text" ></textarea></label>
 </div>
 <p align="right">
-<input type="submit" name="submit_news" id="submit_news" value="Добавить" />
+<input type="submit" name="submit_news" id="submit_news" value="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" />
 </p>
 </form>
 </div>

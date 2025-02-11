@@ -11,7 +11,7 @@ define('myyshop', true);
         header("Location: login.php");
     }
     
-    $_SESSION['urlpage'] = "<a href='index.php'>Главная</a> \ <a href='tovar.php'>Товары</a>";
+    $_SESSION['urlpage'] = "<a href='index.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <a href='tovar.php'>пїЅпїЅпїЅпїЅпїЅпїЅ</a>";
     
     include("include/db_connect.php");
     include("include/functions.php"); 
@@ -25,7 +25,7 @@ if (isset($cat))
 
 	    case 'all':
 
-        $cat_name = 'Все товары';
+        $cat_name = 'пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ';
         $url = "cat=all&";
 	    $cat = ""; 
               
@@ -34,7 +34,7 @@ if (isset($cat))
 
 	    case 'mobile':
 
-        $cat_name = 'Мобильные телефоны';
+        $cat_name = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         $url = "cat=mobile&";
 	    $cat = "WHERE type_tovara='mobile'"; 
              
@@ -43,7 +43,7 @@ if (isset($cat))
         
 	    case 'notebook':
 
-        $cat_name = 'Ноутбуки';
+        $cat_name = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         $url = "cat=notebook&";
 	    $cat = "WHERE type_tovara='notebook'"; 
              
@@ -52,7 +52,7 @@ if (isset($cat))
         
 	    case 'notepad':
 
-        $cat_name = 'Планшеты';
+        $cat_name = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         $url = "cat=notepad&";
 	    $cat = "WHERE type_tovara='notepad'"; 
              
@@ -74,7 +74,7 @@ if (isset($cat))
 }
 else
 {
-        $cat_name = 'Все товары';
+        $cat_name = 'пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ';
         $url = "";
         $cat = "";        
 } 
@@ -92,7 +92,7 @@ if (isset($action))
             $delete = mysql_query("DELETE FROM table_products WHERE products_id = '$id'",$link);
         } else
         {
-            $msgerror = 'У вас нет прав на удаление товара';
+            $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ';
         }           
       
 	    break;
@@ -107,11 +107,11 @@ if (isset($action))
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="jquery_confirm/jquery_confirm.css" rel="stylesheet" type="text/css" />      
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> 
     <script type="text/javascript" src="js/script.js"></script> 
     <script type="text/javascript" src="jquery_confirm/jquery_confirm.js"></script> 
 
-	<title>Панель управления</title>
+	<title>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 
 <body>
@@ -128,12 +128,12 @@ if (isset($action))
 <div id="block-parameters">
 
 <ul id="options-list">
-<li>Товары</li>
+<li>пїЅпїЅпїЅпїЅпїЅпїЅ</li>
 <li><a id="select-links" href="#"><? echo $cat_name; ?></a>
 <div id="list-links" >
 <ul>
-<li><a href="tovar.php?cat=all"><strong>Все товары</strong></a></li>
-<li><a href="tovar.php?cat=mobile"><strong>Телефоны</strong></a></li>
+<li><a href="tovar.php?cat=all"><strong>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</strong></a></li>
+<li><a href="tovar.php?cat=mobile"><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</strong></a></li>
 <?php
 
 
@@ -151,7 +151,7 @@ do
 ?>
 </ul>
 <ul>
-<li><a href="tovar.php?cat=notebook"><strong>Ноутбуки</strong></a></li>
+<li><a href="tovar.php?cat=notebook"><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</strong></a></li>
 <?php
  $result1 = mysql_query("SELECT * FROM category WHERE type='notebook'",$link);
   If (mysql_num_rows($result1) > 0)
@@ -167,7 +167,7 @@ do
 ?>
 </ul>
 <ul>
-<li><a href="tovar.php?cat=notepad"><strong>Планшеты</strong></a></li>
+<li><a href="tovar.php?cat=notepad"><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</strong></a></li>
 <?php
  $result1 = mysql_query("SELECT * FROM category WHERE type='notepad'",$link);
   If (mysql_num_rows($result1) > 0)
@@ -189,8 +189,8 @@ do
 
 <div id="block-info">
 
-<p id="count-style">Всего товаров - <?php echo $all_count_result;?><strong></strong></p>
-<p align="right" id="add-style"> <a href="add_product.php">Добавить товар</a></p>
+<p id="count-style">пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - <?php echo $all_count_result;?><strong></strong></p>
+<p align="right" id="add-style"> <a href="add_product.php">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</a></p>
 
 </div>
 
@@ -205,18 +205,18 @@ $page = (int)$_GET['page'];
 $count = mysql_query("SELECT COUNT(*) FROM table_products $cat",$link);
 $temp = mysql_fetch_array($count);
 $post = $temp[0];
-// Находим общее число страниц
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $total = (($post - 1) / $num) + 1;
 $total =  intval($total);
-// Определяем начало сообщений для текущей страницы
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $page = intval($page);
-// Если значение $page меньше единицы или отрицательно
-// переходим на первую страницу
-// А если слишком большое, то переходим на последнюю
+// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ $page пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+// пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if(empty($page) or $page < 0) $page = 1;
   if($page > $total) $page = $total;
-// Вычисляем начиная с какого номера
-// следует выводить сообщения
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $start = $page * $num - $num;
 	
 if ($temp[0] > 0)   
@@ -255,7 +255,7 @@ $height = 164;
  <img src="'.$img_path.'" width="'.$width.'" height="'.$height.'" />
 </center>
 <p align="center" class="link-action" >
-<a class="green" href="edit_product.php?id='.$row["products_id"].'">Изменить</a> | <a rel="tovar.php?'.$url.'id='.$row["products_id"].'&action=delete" class="delete" >Удалить</a>
+<a class="green" href="edit_product.php?id='.$row["products_id"].'">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> | <a rel="tovar.php?'.$url.'id='.$row["products_id"].'&action=delete" class="delete" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>
 </p>
  </li> 
  ';   
@@ -267,11 +267,11 @@ echo'
 } 
 }
 
-if ($page != 1) $pervpage = '<li><a class="pstr-prev" href="tovar.php?'.$url.'page='. ($page - 1) .'" />Назад</a></li>';
+if ($page != 1) $pervpage = '<li><a class="pstr-prev" href="tovar.php?'.$url.'page='. ($page - 1) .'" />пїЅпїЅпїЅпїЅпїЅ</a></li>';
 
-if ($page != $total) $nextpage = '<li><a class="pstr-next" href="tovar.php?'.$url.'page='. ($page + 1) .'"/>Вперёд</a></li>';
+if ($page != $total) $nextpage = '<li><a class="pstr-next" href="tovar.php?'.$url.'page='. ($page + 1) .'"/>пїЅпїЅпїЅпїЅпїЅ</a></li>';
 
-// Находим две ближайшие станицы с обоих краев, если они есть
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 if($page - 5 > 0) $page5left = '<li><a href="tovar.php?'.$url.'page='. ($page - 5) .'">'. ($page - 5) .'</a></li>';
 if($page - 4 > 0) $page4left = '<li><a href="tovar.php?'.$url.'page='. ($page - 4) .'">'. ($page - 4) .'</a></li>';
 if($page - 3 > 0) $page3left = '<li><a href="tovar.php?'.$url.'page='. ($page - 3) .'">'. ($page - 3) .'</a></li>';

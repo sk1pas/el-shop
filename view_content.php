@@ -28,7 +28,7 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="trackbar/trackbar.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css"/>
-	<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="/js/jcarousellite_1.0.1.js"></script>
     <script type="text/javascript" src="/js/shop-script.js"></script>
     <script type="text/javascript" src="/js/jquery.cookie.min.js"></script>
@@ -37,7 +37,7 @@
     <script type="text/javascript" src="/fancybox/jquery.fancybox.js"></script>
     <script type="text/javascript" src="/js/jTabs.js"></script>
     
-    <title>Интеренет магазин цифровой техники</title>
+    <title>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
     
     <script type="text/javascript">
     $(document).ready(function() {
@@ -87,7 +87,7 @@
                 $height = 200;
             }
             
-            //Количество отзывов
+            //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             $query_reviews = mysql_query("SELECT * FROM table_reviews WHERE products_id = $id AND moderat = '1'",$link);
             if ($query_reviews != ''){
             $count_reviews = mysql_num_rows($query_reviews);
@@ -96,7 +96,7 @@
             echo '
             
             <div id="block-breadcrumbs-and-rating">
-            <p id="nav-breadcrumbs"><a href="view_cat.php?type=mobile">Мобильные телефоны</a> \ <span>'.$row1["brand"].'</span></p>
+            <p id="nav-breadcrumbs"><a href="view_cat.php?type=mobile">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <span>'.$row1["brand"].'</span></p>
             
             <div id="block-like">
             <p id="likegood" tid="'.$id.'"></p>
@@ -116,7 +116,7 @@
             <li><img src="/images/comment-icon.png"><p>'.$count_reviews.'</p></li>
             </ul>
             
-            <p id="style-price">'.group_numerals($row1["price"]).' грн</p>
+            <p id="style-price">'.group_numerals($row1["price"]).' пїЅпїЅпїЅ</p>
             
             <a class="add-cart" id="add-cart-view" tid="'.$row1["products_id"].'"></a>
             
@@ -169,9 +169,9 @@
         echo '
         
         <ul class="tabs">
-        <li><a class="active" href="#">Описание</a></li>
-        <li><a href="#">Характеристики</a></li>
-        <li><a href="#">Отзывы</a></li>
+        <li><a class="active" href="#">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
+        <li><a href="#">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
+        <li><a href="#">пїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         </ul>
         
         <div class="tabs_content">
@@ -179,7 +179,7 @@
         <div>'.$row["description"].'</div>
         <div>'.$row["features"].'</div>
         <div>
-        <p id="link-send-review"><a class="send-review" href="#send-review">Написать отзыв</a></p>
+        <p id="link-send-review"><a class="send-review" href="#send-review">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</a></p>
          
         ';
         
@@ -203,7 +203,7 @@
             while ($row_reviews = mysql_fetch_array($query_reviews));
         }
         else{
-            echo '<p class="title-no-info">Отзывов нет</p>';
+            echo '<p class="title-no-info">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ</p>';
         }
         
         
@@ -215,13 +215,13 @@
         
     <div id="send-review" >
     
-    <p align="right" id="title-review">Публикация отзыва производится после предварительной модерации.</p>
+    <p align="right" id="title-review">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.</p>
     
     <ul>
-    <li><p align="right"><label id="label-name" >Имя<span>*</span></label><input maxlength="15" type="text"  id="name_review" /></p></li>
-    <li><p align="right"><label id="label-good" >Достоинства<span>*</span></label><textarea id="good_review" ></textarea></p></li>    
-    <li><p align="right"><label id="label-bad" >Недостатки<span>*</span></label><textarea id="bad_review" ></textarea></p></li>     
-    <li><p align="right"><label id="label-comment" >Комментарий</label><textarea id="comment_review" ></textarea></p></li>     
+    <li><p align="right"><label id="label-name" >пїЅпїЅпїЅ<span>*</span></label><input maxlength="15" type="text"  id="name_review" /></p></li>
+    <li><p align="right"><label id="label-good" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ<span>*</span></label><textarea id="good_review" ></textarea></p></li>    
+    <li><p align="right"><label id="label-bad" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ<span>*</span></label><textarea id="bad_review" ></textarea></p></li>     
+    <li><p align="right"><label id="label-comment" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label><textarea id="comment_review" ></textarea></p></li>     
     </ul>
     <p id="reload-img"><img src="/images/loading.gif"/></p> <p id="button-send-review" iid="'.$id.'" ></p>
     </div>

@@ -11,7 +11,7 @@ define('myyshop', true);
         header("Location: login.php");
     }
     
-    $_SESSION['urlpage'] = "<a href='index.php'>Главная</a> \ <a href='view_order.php'>Просмотр заказов</a>";
+    $_SESSION['urlpage'] = "<a href='index.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <a href='view_order.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>";
     
     include("include/db_connect.php");
     include("include/functions.php"); 
@@ -29,7 +29,7 @@ define('myyshop', true);
             $update = mysql_query("UPDATE orders SET order_confirmed='yes' WHERE order_id = '$id'",$link);
         }else
         {
-            $msgerror = 'У вас нет прав на подтсверждение заказов';
+            $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         }   
               
      	 break;
@@ -42,7 +42,7 @@ define('myyshop', true);
            header("Location: orders.php"); 
         }else
         {
-            $msgerror = 'У вас нет прав на удаление заказов';
+            $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         }
         
                 
@@ -58,11 +58,11 @@ define('myyshop', true);
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="jquery_confirm/jquery_confirm.css" rel="stylesheet" type="text/css" />      
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> 
     <script type="text/javascript" src="js/script.js"></script> 
     <script type="text/javascript" src="jquery_confirm/jquery_confirm.js"></script> 
 
-	<title>Панель управления - Просмотр заказов</title>
+	<title>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 
 <body>
@@ -74,7 +74,7 @@ define('myyshop', true);
 <div id="block-content">
 
 <div id="block-parameters">
-<p id="title-page">Просмотр заказа</p>
+<p id="title-page">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</p>
 </div>
 
 <?php
@@ -93,23 +93,23 @@ do
 {
 if ($row["order_confirmed"] == 'yes')
 {
-    $status = '<span class="green">Обработан</span>';
+    $status = '<span class="green">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span>';
 } else
 {
-    $status = '<span class="red">Не обработан</span>';    
+    $status = '<span class="red">пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span>';    
 }
 
  echo '
-  <p class="view-order-link" ><a class="green" href="view_order.php?id='.$row["order_id"].'&action=accept" >Подтвердить заказ</a> | <a class="delete" rel="view_order.php?id='.$row["order_id"].'&action=delete" >Удалить заказ</a></p>
+  <p class="view-order-link" ><a class="green" href="view_order.php?id='.$row["order_id"].'&action=accept" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</a> | <a class="delete" rel="view_order.php?id='.$row["order_id"].'&action=delete" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</a></p>
   <p class="order-datetime" >'.$row["order_datetime"].'</p>
-  <p class="order-number" >Заказ № '.$row["order_id"].' - '.$status.'</p>
+  <p class="order-number" >пїЅпїЅпїЅпїЅпїЅ пїЅ '.$row["order_id"].' - '.$status.'</p>
 
 <TABLE align="center" CELLPADDING="10" WIDTH="100%">
 <TR>
-<TH>№</TH>
-<TH>Наименование товара</TH>
-<TH>Цена</TH>
-<TH>Количество</TH>
+<TH>пїЅ</TH>
+<TH>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</TH>
+<TH>пїЅпїЅпїЅпїЅ</TH>
+<TH>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</TH>
 </TR>
 ';
 $query_product = mysql_query("SELECT * FROM buy_products,table_products WHERE buy_products.buy_id_order = '$id' AND table_products.products_id = buy_products.buy_id_product",$link);
@@ -123,7 +123,7 @@ echo '
  <TR>
 <TD  align="CENTER" >'.$index_count.'</TD>
 <TD  align="CENTER" >'.$result_query["title"].'</TD>
-<TD  align="CENTER" >'.$result_query["price"].' руб</TD>
+<TD  align="CENTER" >'.$result_query["price"].' пїЅпїЅпїЅ</TD>
 <TD  align="CENTER" >'.$result_query["buy_count_product"].'</TD>
 </TR>
 
@@ -133,29 +133,29 @@ echo '
 
 if ($row["order_pay"] == "accepted")
 {
-    $statpay = '<span class="green">Оплачено</span>';
+    $statpay = '<span class="green">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span>';
 }else
 {
-    $statpay = '<span class="red">Не оплачено</span>';
+    $statpay = '<span class="red">пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span>';
 }
 
 echo '
 </TABLE>
 <ul id="info-order">
-<li>Общая цена - <span>'.$price.'</span> руб</li>
-<li>Способ доставки - <span>'.$row["order_dostavka"].'</span></li>
-<li>Статус оплаты - '.$statpay.'</li>
-<li>Тип оплаты - <span>'.$row["order_type_pay"].'</span></li>
-<li>Дата оплаты - <span>'.$row["order_datetime"].'</span></li>
+<li>пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ - <span>'.$price.'</span> пїЅпїЅпїЅ</li>
+<li>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - <span>'.$row["order_dostavka"].'</span></li>
+<li>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - '.$statpay.'</li>
+<li>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - <span>'.$row["order_type_pay"].'</span></li>
+<li>пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - <span>'.$row["order_datetime"].'</span></li>
 </ul>
 
 
 <TABLE align="center" CELLPADDING="10" WIDTH="100%">
 <TR>
-<TH>ФИО</TH>
-<TH>Адрес</TH>
-<TH>Контакты</TH>
-<TH>Примечание</TH>
+<TH>пїЅпїЅпїЅ</TH>
+<TH>пїЅпїЅпїЅпїЅпїЅ</TH>
+<TH>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</TH>
+<TH>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</TH>
 </TR>
 
  <TR>
@@ -173,7 +173,7 @@ echo '
 
 } else
 {
-    echo '<p id="form-error" align="center">У вас нет прав на просмотр данного раздела</p>';
+    echo '<p id="form-error" align="center">пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</p>';
 }
 ?>
 

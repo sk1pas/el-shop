@@ -14,32 +14,32 @@ $search = clear_string($_GET["q"]);
     switch ($sorting) {
         case 'price-asc';
         $sorting = 'price ASC';
-        $sort_name = 'От дешевых к дорогим';
+        $sort_name = 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         break;
         
         case 'price-desc';
         $sorting = 'price DESC';
-        $sort_name = 'От дорогих к дешевым';
+        $sort_name = 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         break;
         
         case 'popular';
         $sorting = 'count DESC';
-        $sort_name = 'Популярное';
+        $sort_name = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         break;
         
         case 'news';
         $sorting = 'datetime DESC';
-        $sort_name = 'Новинки';
+        $sort_name = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         break;
         
         case 'brand';
         $sorting = 'brand';
-        $sort_name = 'От дешевых к дорогим';
+        $sort_name = 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         break;
         
         default:
         $sorting = 'products_id';
-        $sort_name = 'Нет сортировки';
+        $sort_name = 'пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         break;
     };
     
@@ -51,13 +51,13 @@ $search = clear_string($_GET["q"]);
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="trackbar/trackbar.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="/js/jcarousellite_1.0.1.js"></script>
     <script type="text/javascript" src="/js/shop-script.js"></script>
     <script type="text/javascript" src="/js/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="/trackbar/jquery.trackbar.js"></script>
     <script type="text/javascript" src="/js/TextChange.js"></script>
-    <title>Поиск - <?php echo $search; ?></title>
+    <title>пїЅпїЅпїЅпїЅпїЅ - <?php echo $search; ?></title>
 </head>
 <body>
 <span id="okok"></span>
@@ -78,7 +78,7 @@ $search = clear_string($_GET["q"]);
 	if (strlen($search) >=2 && strlen($search) < 200)
     {
 
-	$num = 6; // Здесь указываем сколько хотим выводить товаров.
+	$num = 6; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
     $page = (int)$_GET['page'];              
     
 	$count = mysql_query("SELECT COUNT(*) FROM table_products WHERE title LIKE '%$search%' AND visible = '1'",$link);
@@ -88,7 +88,7 @@ $search = clear_string($_GET["q"]);
 	{  
 	$tempcount = $temp[0];
 
-	// Находим общее число страниц
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	$total = (($tempcount - 1) / $num) + 1;
 	$total =  intval($total);
 
@@ -98,8 +98,8 @@ $search = clear_string($_GET["q"]);
        
 	if($page > $total) $page = $total;
 	 
-	// Вычисляем начиная с какого номера
-    // следует выводить товары 
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 
 	$start = $page * $num - $num;
 
 	$qury_start_num = " LIMIT $start, $num"; 
@@ -110,19 +110,19 @@ $search = clear_string($_GET["q"]);
     
     echo '
 <div id="block-sorting">
-<p id="nav-breadcrumbs"><a href="index.php">Главная страница</a> \ <span>Поиск</span></p>
+<p id="nav-breadcrumbs"><a href="index.php">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <span>пїЅпїЅпїЅпїЅпїЅ</span></p>
 <ul id="option-list">
-<li>Вид:</li>
+<li>пїЅпїЅпїЅ:</li>
 <li><img id="style-grid" src="/images/icon-grid.png"/></li>
 <li><img id="style-list" src="/images/icon-list.png"/></li>
-<li>Сортировать:</li>
+<li>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</li>
 <li><a id="select-sort">'.$sort_name.'</a>
 <ul id="sorting-list">
-<li><a href="index.php?sort=price-asc">От дешевых к дорогим</a></li>
-<li><a href="index.php?sort=price-desc">От дорогих к дешевым</a></li>
-<li><a href="index.php?sort=popular">Популярное</a></li>
-<li><a href="index.php?sort=news">Новинки</a></li>
-<li><a href="index.php?sort=brand">от А до Я</a></li>
+<li><a href="index.php?sort=price-asc">пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
+<li><a href="index.php?sort=price-desc">пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
+<li><a href="index.php?sort=popular">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
+<li><a href="index.php?sort=news">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
+<li><a href="index.php?sort=brand">пїЅпїЅ пїЅ пїЅпїЅ пїЅ</a></li>
 </ul>
 </li>
 </ul>
@@ -152,7 +152,7 @@ $search = clear_string($_GET["q"]);
                 $height = 200;                
             }
             
-            //Количество отзывов
+            //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             $query_reviews = mysql_query("SELECT * FROM table_reviews WHERE products_id = {$row["products_id"]} AND moderat = '1'",$link);
             if ($query_reviews != ''){
             $count_reviews = mysql_num_rows($query_reviews);
@@ -169,7 +169,7 @@ $search = clear_string($_GET["q"]);
             <li><img src="/images/comment-icon.png"/><p>'.$count_reviews.'</p></li>
             </ul>
             <a class="add-cart-style-grid" href="" tid="'.$row["products_id"].'"></a>
-            <p class="style-price-grid"><strong>'.group_numerals($row["price"]).'</strong> грн</p>
+            <p class="style-price-grid"><strong>'.group_numerals($row["price"]).'</strong> пїЅпїЅпїЅ</p>
             <div class="mini-features">
             '.$row["mini_features"].'            
             </div>
@@ -232,7 +232,7 @@ $search = clear_string($_GET["q"]);
             <p class="style-title-list"><a href="view_content.php?id='.$row["products_id"].'">'.$row["title"].'</a></p>
             
             <a class="add-cart-style-list" href="" tid="'.$row["products_id"].'"></a>
-            <p class="style-price-list"><strong>'.group_numerals($row["price"]).'</strong> грн</p>
+            <p class="style-price-list"><strong>'.group_numerals($row["price"]).'</strong> пїЅпїЅпїЅ</p>
             <div class="style-text-list">
             '.$row["mini_description"].'            
             </div>
@@ -251,7 +251,7 @@ if ($page != 1){ $pstr_prev = '<li><a class="pstr-prev" href="search.php?q='.$se
 if ($page != $total) $pstr_next = '<li><a class="pstr-next" href="search.php?q='.$search.'&page='.($page + 1).'&sort='.$sorting.'">&gt;</a></li>';
 
 
-// Формируем ссылки со страницами
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 if($page - 5 > 0) $page5left = '<li><a href="search.php?q='.$search.'&page='.($page - 5).'&sort='.$sorting.'">'.($page - 5).'</a></li>';
 if($page - 4 > 0) $page4left = '<li><a href="search.php?q='.$search.'&page='.($page - 4).'&sort='.$sorting.'">'.($page - 4).'</a></li>';
@@ -287,11 +287,11 @@ if ($total > 1)
 }
 
 }else {
-    echo "<p align='center'>Ничего не найдено!</p>";
+    echo "<p align='center'>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!</p>";
 }
 
 } else {
-    echo "<p align='center'>Поисковый запрос должен быть от 2 до 200 символов!</p>";
+    echo "<p align='center'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ 2 пїЅпїЅ 200 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!</p>";
 }
 ?>
 

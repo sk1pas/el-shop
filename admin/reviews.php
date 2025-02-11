@@ -11,7 +11,7 @@ define('myyshop', true);
         header("Location: login.php");
     }
     
-    $_SESSION['urlpage'] = "<a href='index.php'>Главная</a> \ <a href='reviews.php'>Отзывы</a>";
+    $_SESSION['urlpage'] = "<a href='index.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <a href='reviews.php'>пїЅпїЅпїЅпїЅпїЅпїЅ</a>";
     
     include("include/db_connect.php");
     include("include/functions.php"); 
@@ -24,21 +24,21 @@ define('myyshop', true);
         case 'accept':
         
         $sort = "moderat='1' DESC";
-        $sort_name = 'Проверенные';
+        $sort_name = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         
         break;
         
         case 'no-accept':
         
         $sort = "moderat='0' DESC";
-        $sort_name = 'Не проверенные';
+        $sort_name = 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         
         break;
         
         default:
         
         $sort = "reviews_id DESC";
-        $sort_name = 'Без сортировки';
+        $sort_name = 'пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         
         break;
     }
@@ -54,7 +54,7 @@ define('myyshop', true);
                 $update = mysql_query("UPDATE table_reviews SET moderat='1' WHERE reviews_id='$id'",$link);
             }else
             {
-                $msgerror = 'У вас нет прав на одобрение отзывов';
+                $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
             }
             
             break;
@@ -66,7 +66,7 @@ define('myyshop', true);
                 $delete = mysql_query("DELETE FROM table_reviews WHERE reviews_id='$id'",$link);
             }else
             {
-                $msgerror = 'У вас нет прав на удаление отзывов';
+                $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
             }           
             
             break;
@@ -81,11 +81,11 @@ define('myyshop', true);
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="jquery_confirm/jquery_confirm.css" rel="stylesheet" type="text/css" />      
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> 
     <script type="text/javascript" src="js/script.js"></script> 
     <script type="text/javascript" src="jquery_confirm/jquery_confirm.js"></script> 
 
-	<title>Панель управления - Отзывы</title>
+	<title>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 
 <body>
@@ -105,13 +105,13 @@ define('myyshop', true);
 <div id="block-parameters">
 
 <ul id="options-list">
-<li>Сортировать</li>
+<li>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</li>
 <li><a id="select-links" href="#"><? echo $sort_name; ?></a>
 
 <ul id="list-links-sort">
 
-<li><a href="reviews.php?sort=accept">Проверенные</a></li>
-<li><a href="reviews.php?sort=no-accept">Не проверенные</a></li>
+<li><a href="reviews.php?sort=accept">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
+<li><a href="reviews.php?sort=no-accept">пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
 </ul>
 
 </li>
@@ -121,8 +121,8 @@ define('myyshop', true);
 <div id="block-info">
 
 <ul id="review-info-count">
-<li>Всего отзывов - <strong><?php echo $all_count_result;?></strong></li>
-<li>Не проверенные - <strong><?php echo $no_accept_count_result;?></strong></li>
+<li>пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - <strong><?php echo $all_count_result;?></strong></li>
+<li>пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - <strong><?php echo $no_accept_count_result;?></strong></li>
 </ul>
 </div>
 
@@ -137,18 +137,18 @@ if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>'
 $count = mysql_query("SELECT COUNT(*) FROM table_reviews",$link);
 $temp = mysql_fetch_array($count);
 $post = $temp[0];
-// Находим общее число страниц
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $total = (($post - 1) / $num) + 1;
 $total =  intval($total);
-// Определяем начало сообщений для текущей страницы
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $page = intval($page);
-// Если значение $page меньше единицы или отрицательно
-// переходим на первую страницу
-// А если слишком большое, то переходим на последнюю
+// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ $page пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+// пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if(empty($page) or $page < 0) $page = 1;
   if($page > $total) $page = $total;
-// Вычисляем начиная с какого номера
-// следует выводить сообщения
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $start = $page * $num - $num;
 
 $result = mysql_query("SELECT * FROM table_reviews,table_products WHERE table_products.products_id = table_reviews.products_id ORDER BY $sort LIMIT $start, $num",$link);
@@ -177,7 +177,7 @@ $width = 100;
 $height = 182;
 }
 
-if ($row["moderat"] == '0'){ $link_accept = '<a class="green" href="reviews.php?id='.$row["reviews_id"].'&action=accept" >Принять</a> | ';  } else { $link_accept = '';  }
+if ($row["moderat"] == '0'){ $link_accept = '<a class="green" href="reviews.php?id='.$row["reviews_id"].'&action=accept" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> | ';  } else { $link_accept = '';  }
     
  echo '
  <div class="block-reviews">
@@ -194,18 +194,18 @@ if ($row["moderat"] == '0'){ $link_accept = '<a class="green" href="reviews.php?
 </div>  
 
 <p class="reviews-comment" >'.$row["comment"].'</p>          
- <p class="links-actions" align="right" >'.$link_accept.'<a class="delete" rel="reviews.php?id='.$row["reviews_id"].'&action=delete" >Удалить</a> </p>
+ <p class="links-actions" align="right" >'.$link_accept.'<a class="delete" rel="reviews.php?id='.$row["reviews_id"].'&action=delete" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> </p>
  </div>
  ';   
     
 } while ($row = mysql_fetch_array($result));
 }   
    
-if ($page != 1) $pervpage = '<li><a class="pstr-prev" href="reviews.php?page='. ($page - 1) .'" />Назад</a></li>';
+if ($page != 1) $pervpage = '<li><a class="pstr-prev" href="reviews.php?page='. ($page - 1) .'" />пїЅпїЅпїЅпїЅпїЅ</a></li>';
 
-if ($page != $total) $nextpage = '<li><a class="pstr-next" href="reviews.php?page='. ($page + 1) .'"/>Вперёд</a></li>';
+if ($page != $total) $nextpage = '<li><a class="pstr-next" href="reviews.php?page='. ($page + 1) .'"/>пїЅпїЅпїЅпїЅпїЅ</a></li>';
 
-// Находим две ближайшие станицы с обоих краев, если они есть
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 if($page - 5 > 0) $page5left = '<li><a href="reviews.php?page='. ($page - 5) .'">'. ($page - 5) .'</a></li>';
 if($page - 4 > 0) $page4left = '<li><a href="reviews.php?page='. ($page - 4) .'">'. ($page - 4) .'</a></li>';
 if($page - 3 > 0) $page3left = '<li><a href="reviews.php?page='. ($page - 3) .'">'. ($page - 3) .'</a></li>';

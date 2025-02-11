@@ -11,7 +11,7 @@ define('myyshop', true);
         header("Location: login.php");
     }
     
-    $_SESSION['urlpage'] = "<a href='index.php'>Главная</a> \ <a href='category.php'>Категории</a>";
+    $_SESSION['urlpage'] = "<a href='index.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <a href='category.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>";
     
     include("include/db_connect.php");
     include("include/functions.php");
@@ -22,8 +22,8 @@ if ($_POST["submit_cat"])
         
     $error = array();
     
-  if (!$_POST["cat_type"])  $error[] = "Укажите тип товара!"; 
-  if (!$_POST["cat_brand"]) $error[] = "Укажите название категории!";
+  if (!$_POST["cat_type"])  $error[] = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!"; 
+  if (!$_POST["cat_brand"]) $error[] = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
   
   if (count($error))
   {
@@ -39,12 +39,12 @@ if ($_POST["submit_cat"])
                             '".$cat_brand."'                              
 						)",$link);
                    
-     $_SESSION['message'] = "<p id='form-success'>Категория успешно добавлена!</p>";   
+     $_SESSION['message'] = "<p id='form-success'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!</p>";   
   }
       
 } else
 {
-    $msgerror = 'У вас нет прав на добавление категории';
+    $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
 }
 }
 ?>
@@ -54,10 +54,10 @@ if ($_POST["submit_cat"])
 	<meta http-equiv="content-type" content="text/html" />
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" /> 
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> 
     <script type="text/javascript" src="js/script.js"></script>    
 
-	<title>Панель управления - Категории</title>
+	<title>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 
 <body>
@@ -68,7 +68,7 @@ if ($_POST["submit_cat"])
 ?>
 <div id="block-content">
 <div id="block-parameters">
-<p id="title-page">Категории</p>
+<p id="title-page">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</p>
 </div>
 <?php
 if(isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
@@ -83,12 +83,12 @@ if(isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
 <ul id="cat_products">
 <li>
 
-<label>Категории</label>
+<label>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label>
 <div>
 <?php
 	if( $_SESSION['delete_category'] == '1')
     {
-        echo '<a class="delete-cat">Удалить</a>';
+        echo '<a class="delete-cat">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>';
     }
 ?>
 </div>
@@ -114,12 +114,12 @@ if(isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
 </select>
 </li>
 <li>
-<label>Тип товара</label>
+<label>пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</label>
 <input type="text" name="cat_type"/>
 </li>
 
 <li>
-<label>Брэнд</label>
+<label>пїЅпїЅпїЅпїЅпїЅ</label>
 <input type="text" name="cat_brand"/>
 </li>
 

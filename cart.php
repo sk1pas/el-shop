@@ -104,13 +104,13 @@ header("Location: cart.php?action=completion");
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="trackbar/trackbar.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="/js/jcarousellite_1.0.1.js"></script>
     <script type="text/javascript" src="/js/shop-script.js"></script>
     <script type="text/javascript" src="/js/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="/trackbar/jquery.trackbar.js"></script>
     <script type="text/javascript" src="/js/TextChange.js"></script>
-    <title>Корзина товаров</title>
+    <title>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 <body>
 <span id="okok"></span>
@@ -138,15 +138,15 @@ header("Location: cart.php?action=completion");
         <div id="block-step">        
         <div id="name-step">        
         <ul>
-        <li><a class="active">1. Корзина товаров</a></li>
+        <li><a class="active">1. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         <li><span>&rarr;</span></li>
-        <li><a>2. Контактная информация</a></li>
+        <li><a>2. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         <li><span>&rarr;</span></li>
-        <li><a>3. Завершение</a></li>                
+        <li><a>3. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>                
         </ul>        
         </div>        
-        <p>шаг 1 из 3</p>
-        <a href="cart.php?action=clear">Очистить</a>        
+        <p>пїЅпїЅпїЅ 1 пїЅпїЅ 3</p>
+        <a href="cart.php?action=clear">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>        
         </div>        
         ';
         
@@ -157,10 +157,10 @@ header("Location: cart.php?action=completion");
             
             echo '        
         <div id="header-list-cart">        
-        <div id="header1">Изображение</div>
-        <div id="header2">Наименование товара</div>
-        <div id="header3">Кол-во</div>
-        <div id="header4">Цена</div>        
+        <div id="header1">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</div>
+        <div id="header2">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</div>
+        <div id="header3">пїЅпїЅпїЅ-пїЅпїЅ</div>
+        <div id="header4">пїЅпїЅпїЅпїЅ</div>        
         </div>        
         ';
             
@@ -216,7 +216,7 @@ header("Location: cart.php?action=completion");
         </ul>
         </div>
         
-        <div id="tovar'.$row["cart_id_product"].'" class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p price="'.$row["cart_price"].'">'.group_numerals($int).' грн</p></div>
+        <div id="tovar'.$row["cart_id_product"].'" class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p price="'.$row["cart_price"].'">'.group_numerals($int).' пїЅпїЅпїЅ</p></div>
         <div class="delete-cart"><a href="cart.php?id='.$row["cart_id_product"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
         
         <div id="bottom-cart-line"></div>
@@ -229,13 +229,13 @@ header("Location: cart.php?action=completion");
             while ($row = mysql_fetch_array($result));
             
             echo '
-            <h2 class="itog-price" align="right">Итого: <strong>'.group_numerals($all_price).'</strong> грн</h2>
-            <p align="right" class="button-next" ><a href="cart.php?action=confirm">Далее</a></p>            
+            <h2 class="itog-price" align="right">пїЅпїЅпїЅпїЅпїЅ: <strong>'.group_numerals($all_price).'</strong> пїЅпїЅпїЅ</h2>
+            <p align="right" class="button-next" ><a href="cart.php?action=confirm">пїЅпїЅпїЅпїЅпїЅ</a></p>            
             ';
         }
         else
         {
-            echo '<h3 id="clear-cart" align="center">Корзина пуста</h3>';
+            echo '<h3 id="clear-cart" align="center">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</h3>';
         }               
         
         break;
@@ -246,41 +246,41 @@ header("Location: cart.php?action=completion");
         <div id="block-step">        
         <div id="name-step">        
         <ul>
-        <li><a href="cart.php?action=oneclick">1. Корзина товаров</a></li>
+        <li><a href="cart.php?action=oneclick">1. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         <li><span>&rarr;</span></li>
-        <li><a class="active">2. Контактная информация</a></li>
+        <li><a class="active">2. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         <li><span>&rarr;</span></li>
-        <li><a>3. Завершение</a></li>                
+        <li><a>3. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>                
         </ul>        
         </div>        
-        <p>шаг 2 из 3</p>               
+        <p>пїЅпїЅпїЅ 2 пїЅпїЅ 3</p>               
         </div>        
         ';
         
         $chck = "";
-        if ($_SESSION['order_delivery'] == "По почте") $chck1 = "checked";
-        if ($_SESSION['order_delivery'] == "Курьером") $chck2 = "checked";
-        if ($_SESSION['order_delivery'] == "Самовывоз") $chck3 = "checked";
+        if ($_SESSION['order_delivery'] == "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ") $chck1 = "checked";
+        if ($_SESSION['order_delivery'] == "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ") $chck2 = "checked";
+        if ($_SESSION['order_delivery'] == "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ") $chck3 = "checked";
         
         echo '
         
-        <h3 class="title-h3">Способы доставки:</h3>
+        <h3 class="title-h3">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</h3>
         <form method="post">
         <ul id="info-radio">
         <li>
-        <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery1" value="По почте" '.$chck1.' />
-        <label class="label_delivery" for="order_delivery1">По почте</label>
+        <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery1" value="пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ" '.$chck1.' />
+        <label class="label_delivery" for="order_delivery1">пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</label>
         </li>
         <li>
-        <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery2" value="Курьером" '.$chck2.' />
-        <label class="label_delivery" for="order_delivery2">Курьером</label>
+        <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery2" value="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" '.$chck2.' />
+        <label class="label_delivery" for="order_delivery2">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label>
         </li>
         <li>
-        <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery3" value="Самовывоз" '.$chck3.' />
-        <label class="label_delivery" for="order_delivery3">Самовывоз</label>
+        <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery3" value="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" '.$chck3.' />
+        <label class="label_delivery" for="order_delivery3">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label>
         </li>       
         </ul>
-        <h3 class="title-h3" >Информация для доставки:</h3>
+        <h3 class="title-h3" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:</h3>
         <ul id="info-order">
         ';
         
@@ -288,16 +288,16 @@ header("Location: cart.php?action=completion");
         {
             echo '
             
-            <li><label for="order_fio"><span>*</span>ФИО</label><input type="text" name="order_fio" id="order_fio" value="'.$_SESSION["order_fio"].'" /><span class="order_span_style">Пример: Иванов Иван Иванович</span></li>
-            <li><label for="order_email"><span>*</span>E-mail</label><input type="text" name="order_email" id="order_email" value="'.$_SESSION["order_email"].'" /><span class="order_span_style" >Пример: ivanov@mail.ru</span></li>
-            <li><label for="order_phone"><span>*</span>Телефон</label><input type="text" name="order_phone" id="order_phone" value="'.$_SESSION["order_phone"].'" /><span class="order_span_style" >Пример: 8 950 100 12 34</span></li>
-            <li><label class="order_label_style" for="order_address"><span>*</span>Адрес<br /> доставки</label><input type="text" name="order_address" id="order_address" value="'.$_SESSION["order_address"].'" /><span>Пример: г. Харьков,<br /> пр. Л. Свободы д 51а, к 305</span></li>            
+            <li><label for="order_fio"><span>*</span>пїЅпїЅпїЅ</label><input type="text" name="order_fio" id="order_fio" value="'.$_SESSION["order_fio"].'" /><span class="order_span_style">пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span></li>
+            <li><label for="order_email"><span>*</span>E-mail</label><input type="text" name="order_email" id="order_email" value="'.$_SESSION["order_email"].'" /><span class="order_span_style" >пїЅпїЅпїЅпїЅпїЅпїЅ: ivanov@mail.ru</span></li>
+            <li><label for="order_phone"><span>*</span>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label><input type="text" name="order_phone" id="order_phone" value="'.$_SESSION["order_phone"].'" /><span class="order_span_style" >пїЅпїЅпїЅпїЅпїЅпїЅ: 8 950 100 12 34</span></li>
+            <li><label class="order_label_style" for="order_address"><span>*</span>пїЅпїЅпїЅпїЅпїЅ<br /> пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label><input type="text" name="order_address" id="order_address" value="'.$_SESSION["order_address"].'" /><span>пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ,<br /> пїЅпїЅ. пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ 51пїЅ, пїЅ 305</span></li>            
             ';
         }
         echo '
-        <li><label class="order_label_style" for="order_note">Примечание</label><textarea name="order_note" >'.$_SESSION["order_note"].'</textarea><span>Уточните информацию о заказе</span></li>
+        <li><label class="order_label_style" for="order_note">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label><textarea name="order_note" >'.$_SESSION["order_note"].'</textarea><span>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</span></li>
         </ul>
-        <p align="right"><input type="submit" name="submitdata" id="confirm-button-next" value="Далее" /></p>
+        <p align="right"><input type="submit" name="submitdata" id="confirm-button-next" value="пїЅпїЅпїЅпїЅпїЅ" /></p>
         </form>
         ';
         
@@ -309,46 +309,46 @@ header("Location: cart.php?action=completion");
         <div id="block-step">        
         <div id="name-step">        
         <ul>
-        <li><a href="cart.php?action=oneclick">1. Корзина товаров</a></li>
+        <li><a href="cart.php?action=oneclick">1. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         <li><span>&rarr;</span></li>
-        <li><a href="cart.php?action=confirm">2. Контактная информация</a></li>
+        <li><a href="cart.php?action=confirm">2. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         <li><span>&rarr;</span></li>
-        <li><a class="active">3. Завершение</a></li>                
+        <li><a class="active">3. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>                
         </ul>        
         </div>        
-        <p>шаг 3 из 3</p>                
+        <p>пїЅпїЅпїЅ 3 пїЅпїЅ 3</p>                
         </div> 
-        <h3>Конечная информация</h3>       
+        <h3>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</h3>       
         ';
         
         if ($_SESSION["auth"] == 'yes_auth')
         {
             echo '
             <ul id="list-info">
-            <li><strong>Способ доставки: </strong>'.$_SESSION['order_delivery'].'</li>
+            <li><strong>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: </strong>'.$_SESSION['order_delivery'].'</li>
             <li><strong>Email: </strong>'.$_SESSION['auth_email'].'</li>
-            <li><strong>ФИО: </strong>'.$_SESSION['auth_surname'].' '.$_SESSION['auth_name'].' '.$_SESSION['auth_patronymic'].'</li>
-            <li><strong>Адрес доставки: </strong>'.$_SESSION['auth_address'].'</li>
-            <li><strong>Телефон: </strong>'.$_SESSION['auth_phone'].'</li>
-            <li><strong>Примечание: </strong>'.$_SESSION['order_note'].'</li>            
+            <li><strong>пїЅпїЅпїЅ: </strong>'.$_SESSION['auth_surname'].' '.$_SESSION['auth_name'].' '.$_SESSION['auth_patronymic'].'</li>
+            <li><strong>пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: </strong>'.$_SESSION['auth_address'].'</li>
+            <li><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: </strong>'.$_SESSION['auth_phone'].'</li>
+            <li><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: </strong>'.$_SESSION['order_note'].'</li>            
             </ul>
             ';
         }else{
             echo '
            <ul id="list-info">
-            <li><strong>Способ доставки: </strong>'.$_SESSION['order_delivery'].'</li>
+            <li><strong>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: </strong>'.$_SESSION['order_delivery'].'</li>
             <li><strong>Email: </strong>'.$_SESSION['order_email'].'</li>
-            <li><strong>ФИО: </strong>'.$_SESSION['order_fio'].'</li>
-            <li><strong>Адрес доставки: </strong>'.$_SESSION['order_address'].'</li>
-            <li><strong>Телефон: </strong>'.$_SESSION['order_phone'].'</li>
-            <li><strong>Примечание: </strong>'.$_SESSION['order_note'].'</li>            
+            <li><strong>пїЅпїЅпїЅ: </strong>'.$_SESSION['order_fio'].'</li>
+            <li><strong>пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: </strong>'.$_SESSION['order_address'].'</li>
+            <li><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: </strong>'.$_SESSION['order_phone'].'</li>
+            <li><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: </strong>'.$_SESSION['order_note'].'</li>            
             </ul>
             ';
         }
         
         echo '
-            <h2 class="itog-price" align="right">Итого: <strong>'.$itogpricecart.'</strong> грн</h2>
-            <p align="right" class="button-next" ><a href="">Оплатить</a></p>            
+            <h2 class="itog-price" align="right">пїЅпїЅпїЅпїЅпїЅ: <strong>'.$itogpricecart.'</strong> пїЅпїЅпїЅ</h2>
+            <p align="right" class="button-next" ><a href="">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></p>            
             ';
         
         break;
@@ -359,15 +359,15 @@ header("Location: cart.php?action=completion");
         <div id="block-step">        
         <div id="name-step">        
         <ul>
-        <li><a class="active">1. Корзина товаров</a></li>
+        <li><a class="active">1. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         <li><span>&rarr;</span></li>
-        <li><a>2. Контактная информация</a></li>
+        <li><a>2. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
         <li><span>&rarr;</span></li>
-        <li><a>3. Завершение</a></li>                
+        <li><a>3. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>                
         </ul>        
         </div>        
-        <p>шаг 1 из 3</p>
-        <a href="cart.php?action=clear">Очистить</a>        
+        <p>пїЅпїЅпїЅ 1 пїЅпїЅ 3</p>
+        <a href="cart.php?action=clear">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>        
         </div>        
         ';
         
@@ -378,10 +378,10 @@ header("Location: cart.php?action=completion");
             
             echo '        
         <div id="header-list-cart">        
-        <div id="header1">Изображение</div>
-        <div id="header2">Наименование товара</div>
-        <div id="header3">Кол-во</div>
-        <div id="header4">Цена</div>        
+        <div id="header1">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</div>
+        <div id="header2">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</div>
+        <div id="header3">пїЅпїЅпїЅ-пїЅпїЅ</div>
+        <div id="header4">пїЅпїЅпїЅпїЅ</div>        
         </div>        
         ';
             
@@ -437,7 +437,7 @@ header("Location: cart.php?action=completion");
         </ul>
         </div>
         
-        <div id="tovar'.$row["cart_id_product"].'" class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p price="'.$row["cart_price"].'">'.group_numerals($int).' грн</p></div>
+        <div id="tovar'.$row["cart_id_product"].'" class="price-product"><h5><span class="span-count">'.$row["cart_count"].'</span> x <span>'.$row["cart_price"].'</span></h5><p price="'.$row["cart_price"].'">'.group_numerals($int).' пїЅпїЅпїЅ</p></div>
         <div class="delete-cart"><a href="cart.php?id='.$row["cart_id_product"].'&action=delete"><img src="/images/bsk_item_del.png"/></a></div>
         
         <div id="bottom-cart-line"></div>
@@ -450,13 +450,13 @@ header("Location: cart.php?action=completion");
             while ($row = mysql_fetch_array($result));
             
             echo '
-            <h2 class="itog-price" align="right">Итого: <strong>'.group_numerals($all_price).'</strong> грн</h2>
-            <p align="right" class="button-next" ><a href="cart.php?action=confirm">Далее</a></p>            
+            <h2 class="itog-price" align="right">пїЅпїЅпїЅпїЅпїЅ: <strong>'.group_numerals($all_price).'</strong> пїЅпїЅпїЅ</h2>
+            <p align="right" class="button-next" ><a href="cart.php?action=confirm">пїЅпїЅпїЅпїЅпїЅ</a></p>            
             ';
         }
         else
         {
-            echo '<h3 id="clear-cart" align="center">Корзина пуста</h3>';
+            echo '<h3 id="clear-cart" align="center">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</h3>';
         }     
         
         break;

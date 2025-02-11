@@ -11,7 +11,7 @@ define('myyshop', true);
         header("Location: login.php");
     }
     
-    $_SESSION['urlpage'] = "<a href='index.php'>Главная</a> \ <a href='administrators.php'>Администраторы</a>";
+    $_SESSION['urlpage'] = "<a href='index.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <a href='administrators.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>";
     
     include("include/db_connect.php");
     include("include/functions.php");             
@@ -27,7 +27,7 @@ if (isset($action))
             $delete = mysql_query("DELETE FROM reg_admin WHERE id = '$id'",$link);
         } else
         {
-            $msgerror = 'У вас нет прав на удаление администраторов';
+            $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         }
 
                
@@ -45,11 +45,11 @@ if (isset($action))
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="jquery_confirm/jquery_confirm.css" rel="stylesheet" type="text/css" />      
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> 
     <script type="text/javascript" src="js/script.js"></script> 
     <script type="text/javascript" src="jquery_confirm/jquery_confirm.js"></script>     
 
-	<title>Панель управления - Администраторы</title>
+	<title>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 
 <body>
@@ -60,8 +60,8 @@ if (isset($action))
 ?>
 <div id="block-content">
 <div id="block-parameters">
-<p id="title-page" >Администраторы</p>
-<p align="right" id="add-style"><a href="add_administrators.php">Добавить админа</a></p>
+<p id="title-page" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</p>
+<p align="right" id="add-style"><a href="add_administrators.php">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ</a></p>
 </div>
 
 <?php
@@ -80,10 +80,10 @@ echo '
 <ul id="list-admin" >
 <li>
 <h3>'.$row["fio"].'</h3>
-<p><strong>Должность</strong> - '.$row["role"].'</p>
+<p><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</strong> - '.$row["role"].'</p>
 <p><strong>E-mail</strong> - '.$row["email"].'</p>
-<p><strong>Телефон</strong> - '.$row["phone"].'</p>
-<p class="links-actions" align="right" ><a class="green" href="edit_administrators.php?id='.$row["id"].'" >Изменить</a> | <a class="delete" rel="administrators.php?id='.$row["id"].'&action=delete" >Удалить</a></p>
+<p><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</strong> - '.$row["phone"].'</p>
+<p class="links-actions" align="right" ><a class="green" href="edit_administrators.php?id='.$row["id"].'" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> | <a class="delete" rel="administrators.php?id='.$row["id"].'&action=delete" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></p>
 </li>
 </ul>   
     ';    
@@ -92,7 +92,7 @@ echo '
 }
 } else
 {
-    echo '<p id="form-error" align="center">У вас нет прав на просмотр данного раздела</p>';
+    echo '<p id="form-error" align="center">пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</p>';
 }
 ?>
 

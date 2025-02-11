@@ -14,7 +14,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="trackbar/trackbar.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="/js/jcarousellite_1.0.1.js"></script>
     <script type="text/javascript" src="/js/shop-script.js"></script>
     <script type="text/javascript" src="/js/jquery.cookie.min.js"></script>
@@ -26,7 +26,7 @@
 $(document).ready(function() {	
       $('#form_reg').validate(
 				{	
-					// правила для проверки
+					// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 					rules:{
 						"reg_login":{
 							required:true,
@@ -78,47 +78,47 @@ $(document).ready(function() {
 						}
 					},
 
-					// выводимые сообщения при нарушении соответствующих правил
+					// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 					messages:{
 						"reg_login":{
-							required:"Укажите Логин!",
-                            minlength:"От 5 до 15 символов!",
-                            maxlength:"От 5 до 15 символов!",
-                            remote: "Логин занят!"
+							required:"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!",
+                            minlength:"пїЅпїЅ 5 пїЅпїЅ 15 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            maxlength:"пїЅпїЅ 5 пїЅпїЅ 15 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            remote: "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!"
 						},
 						"reg_pass":{
-							required:"Укажите Пароль!",
-                            minlength:"От 7 до 15 символов!",
-                            maxlength:"От 7 до 15 символов!"
+							required:"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            minlength:"пїЅпїЅ 7 пїЅпїЅ 15 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            maxlength:"пїЅпїЅ 7 пїЅпїЅ 15 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!"
 						},
 						"reg_surname":{
-							required:"Укажите вашу Фамилию!",
-                            minlength:"От 3 до 20 символов!",
-                            maxlength:"От 3 до 20 символов!"                            
+							required:"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            minlength:"пїЅпїЅ 3 пїЅпїЅ 20 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            maxlength:"пїЅпїЅ 3 пїЅпїЅ 20 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!"                            
 						},
 						"reg_name":{
-							required:"Укажите ваше Имя!",
-                            minlength:"От 3 до 15 символов!",
-                            maxlength:"От 3 до 15 символов!"                               
+							required:"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ!",
+                            minlength:"пїЅпїЅ 3 пїЅпїЅ 15 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            maxlength:"пїЅпїЅ 3 пїЅпїЅ 15 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!"                               
 						},
 						"reg_patronymic":{
-							required:"Укажите ваше Отчество!",
-                            minlength:"От 3 до 25 символов!",
-                            maxlength:"От 3 до 25 символов!"  
+							required:"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            minlength:"пїЅпїЅ 3 пїЅпїЅ 25 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            maxlength:"пїЅпїЅ 3 пїЅпїЅ 25 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!"  
 						},
 						"reg_email":{
-						    required:"Укажите свой E-mail",
-							email:"Не корректный E-mail"
+						    required:"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ E-mail",
+							email:"пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ E-mail"
 						},
 						"reg_phone":{
-							required:"Укажите номер телефона!"
+							required:"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!"
 						},
 						"reg_address":{
-							required:"Необходимо указать адрес доставки!"
+							required:"пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!"
 						},
 						"reg_captcha":{
-							required:"Введите код с картинки!",
-                            remote: "Не верный код проверки!"
+							required:"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!",
+                            remote: "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!"
 						}
 					},
 					
@@ -130,7 +130,7 @@ $(document).ready(function() {
     {
        $("#block-form-registration").fadeOut(300,function() {
         
-        $("#reg_message").addClass("reg_message_good").fadeIn(400).html("Вы успешно зарегистрированы!");
+        $("#reg_message").addClass("reg_message_good").fadeIn(400).html("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
         $("#form_submit").hide();
         
        });
@@ -148,7 +148,7 @@ $(document).ready(function() {
      
 </script>
     
-    <title>Регистрация</title>
+    <title>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 <body>
 <div id="block-body">
@@ -164,7 +164,7 @@ $(document).ready(function() {
 </div>
 <div id="block-content">
 
-<h2 class="h2-title">Регистрация</h2>
+<h2 class="h2-title">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</h2>
 
 <form method="POST" id="form_reg" action="/reg/handler_reg.php">
 
@@ -174,32 +174,32 @@ $(document).ready(function() {
 <ul id="form-registration">
 
 <li>
-<label>Логин</label>
+<label>пїЅпїЅпїЅпїЅпїЅ</label>
 <span class="star">*</span>
 <input type="text" name="reg_login" id="reg_login"/>
 </li>
 
 <li>
-<label>Пароль</label>
+<label>пїЅпїЅпїЅпїЅпїЅпїЅ</label>
 <span class="star">*</span>
 <input type="text" name="reg_pass" id="reg_pass"/>
-<span id="genpass">Сгенерировать</span>
+<span id="genpass">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span>
 </li>
 
 <li>
-<label>Фамилия</label>
+<label>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label>
 <span class="star">*</span>
 <input type="text" name="reg_surname" id="reg_surname"/>
 </li>
 
 <li>
-<label>Имя</label>
+<label>пїЅпїЅпїЅ</label>
 <span class="star">*</span>
 <input type="text" name="reg_name" id="reg_name"/>
 </li>
 
 <li>
-<label>Отчество</label>
+<label>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label>
 <span class="star">*</span>
 <input type="text" name="reg_patronymic" id="reg_patronymic"/>
 </li>
@@ -211,13 +211,13 @@ $(document).ready(function() {
 </li>
 
 <li>
-<label>Мобильный телефон</label>
+<label>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label>
 <span class="star">*</span>
 <input type="text" name="reg_phone" id="reg_phone"/>
 </li>
 
 <li>
-<label>Адрес доставки</label>
+<label>пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</label>
 <span class="star">*</span>
 <input type="text" name="reg_address" id="reg_address"/>
 </li>
@@ -226,7 +226,7 @@ $(document).ready(function() {
 <div id="block-captcha">
 <img src="/reg/reg_captcha.php"/>
 <input type="text" name="reg_captcha" id="reg_captcha"/>
-<p id="reloadcaptcha">Обновить</p>
+<p id="reloadcaptcha">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</p>
 
 </div>
 </li>
@@ -234,7 +234,7 @@ $(document).ready(function() {
 </ul>
 
 </div>
-<p align="right"><input type="submit" name="reg_submit" id="form_submit" value="Регистрация"/></p>
+<p align="right"><input type="submit" name="reg_submit" id="form_submit" value="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"/></p>
 
 </form>
 

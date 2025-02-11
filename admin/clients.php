@@ -11,7 +11,7 @@ define('myyshop', true);
         header("Location: login.php");
     }
     
-    $_SESSION['urlpage'] = "<a href='index.php'>Главная</a> \ <a href='clients.php'>Клиенты</a>";
+    $_SESSION['urlpage'] = "<a href='index.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <a href='clients.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a>";
     
     include("include/db_connect.php");
     include("include/functions.php");             
@@ -27,7 +27,7 @@ if (isset($action))
             $delete = mysql_query("DELETE FROM reg_user WHERE id = '$id'",$link); 
         }else
         {
-            $msgerror = 'У вас нет прав на удаление клиента';
+            $msgerror = 'пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         }             
                     
 	    break;
@@ -43,11 +43,11 @@ if (isset($action))
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="jquery_confirm/jquery_confirm.css" rel="stylesheet" type="text/css" />      
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> 
     <script type="text/javascript" src="js/script.js"></script> 
     <script type="text/javascript" src="jquery_confirm/jquery_confirm.js"></script>     
 
-	<title>Панель управления - Клиенты</title>
+	<title>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 
 <body>
@@ -60,7 +60,7 @@ if (isset($action))
 ?>
 <div id="block-content">
 <div id="block-parameters">
-<p id="count-clients">Клиентов - <strong><?php echo $result_count;?></strong></p>
+<p id="count-clients">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - <strong><?php echo $result_count;?></strong></p>
 </div>
 
 <?php
@@ -76,18 +76,18 @@ $num = 10;
 $count = mysql_query("SELECT COUNT(*) FROM reg_user",$link);
 $temp = mysql_fetch_array($count);
 $post = $temp[0];
-// Находим общее число страниц
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $total = (($post - 1) / $num) + 1;
 $total =  intval($total);
-// Определяем начало сообщений для текущей страницы
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $page = intval($page);
-// Если значение $page меньше единицы или отрицательно
-// переходим на первую страницу
-// А если слишком большое, то переходим на последнюю
+// пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ $page пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+// пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if(empty($page) or $page < 0) $page = 1;
   if($page > $total) $page = $total;
-// Вычисляем начиная с какого номера
-// следует выводить сообщения
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 $start = $page * $num - $num;
 	
 if ($temp[0] > 0)   
@@ -105,16 +105,16 @@ do
  
  <p class="client-datetime" >'.$row["datetime"].'</p>
  <p class="client-email" ><strong>'.$row["email"].'</strong></p>
- <p class="client-links" ><a class="delete" rel="clients.php?id='.$row["id"].'&action=delete" >Удалить</a></p>
+ <p class="client-links" ><a class="delete" rel="clients.php?id='.$row["id"].'&action=delete" >пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></p>
  
  
  <ul>
  <li><strong>E-Mail</strong> - '.$row["email"].'</li>
- <li><strong>ФИО</strong> - '.$row["surname"].' '.$row["name"].' '.$row["patronymic"].'</li>
- <li><strong>Адрес</strong> - '.$row["address"].'</li>
- <li><strong>Телефон</strong> - '.$row["phone"].'</li>
+ <li><strong>пїЅпїЅпїЅ</strong> - '.$row["surname"].' '.$row["name"].' '.$row["patronymic"].'</li>
+ <li><strong>пїЅпїЅпїЅпїЅпїЅ</strong> - '.$row["address"].'</li>
+ <li><strong>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</strong> - '.$row["phone"].'</li>
  <li><strong>IP</strong> - '.$row["ip"].'</li>
- <li><strong>Дата регистрации</strong> - '.$row["datetime"].'</li>
+ <li><strong>пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</strong> - '.$row["datetime"].'</li>
  </ul>
  
  
@@ -125,11 +125,11 @@ do
 } while ($row = mysql_fetch_array($result));
 }   
 }    
-if ($page != 1) $pervpage = '<li><span><a href="clients.php?page='. ($page - 1) .'" />Назад</a></span></li>';
+if ($page != 1) $pervpage = '<li><span><a href="clients.php?page='. ($page - 1) .'" />пїЅпїЅпїЅпїЅпїЅ</a></span></li>';
 
-if ($page != $total) $nextpage = '<li><span><a href="clients.php?page='. ($page + 1) .'"/>Вперёд</a></span></li>';
+if ($page != $total) $nextpage = '<li><span><a href="clients.php?page='. ($page + 1) .'"/>пїЅпїЅпїЅпїЅпїЅ</a></span></li>';
 
-// Находим две ближайшие станицы с обоих краев, если они есть
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 if($page - 5 > 0) $page5left = '<li><a href="clients.php?page='. ($page - 5) .'">'. ($page - 5) .'</a></li>';
 if($page - 4 > 0) $page4left = '<li><a href="clients.php?page='. ($page - 4) .'">'. ($page - 4) .'</a></li>';
 if($page - 3 > 0) $page3left = '<li><a href="clients.php?page='. ($page - 3) .'">'. ($page - 3) .'</a></li>';
@@ -163,7 +163,7 @@ echo '
 }
 }else
 {
-    echo '<p id="form-error" align="center">У вас нет прав на просмотр данной страницы</p>';
+    echo '<p id="form-error" align="center">пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</p>';
 }
 ?>
 

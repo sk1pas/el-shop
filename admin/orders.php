@@ -11,7 +11,7 @@ define('myyshop', true);
         header("Location: login.php");
     }
     
-    $_SESSION['urlpage'] = "<a href='index.php'>Главная</a> \ <a href='orders.php'>Заказы</a>";
+    $_SESSION['urlpage'] = "<a href='index.php'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a> \ <a href='orders.php'>пїЅпїЅпїЅпїЅпїЅпїЅ</a>";
     
     include("include/db_connect.php");
     include("include/functions.php"); 
@@ -22,28 +22,28 @@ define('myyshop', true);
         case 'all-orders':
         
         $sort = "order_id DESC";
-        $sort_name = 'От А до Я';
+        $sort_name = 'пїЅпїЅ пїЅ пїЅпїЅ пїЅ';
         
         break;
         
         case 'confirmed':
         
         $sort = "order_confirmed = 'yes' DESC";
-        $sort_name = 'Обработанные';
+        $sort_name = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         
         break;
         
         case 'no-confirmed':
         
         $sort = "order_confirmed = 'no' DESC";
-        $sort_name = 'Не обработанные';
+        $sort_name = 'пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
         
         break;
         
         default:
         
         $sort = "order_id DESC";
-        $sort_name = 'От А до Я';
+        $sort_name = 'пїЅпїЅ пїЅ пїЅпїЅ пїЅ';
         
         break;       
     }
@@ -56,11 +56,11 @@ define('myyshop', true);
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="jquery_confirm/jquery_confirm.css" rel="stylesheet" type="text/css" />      
-    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script> 
     <script type="text/javascript" src="js/script.js"></script> 
     <script type="text/javascript" src="jquery_confirm/jquery_confirm.js"></script> 
 
-	<title>Панель управления - Заказы</title>
+	<title>пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅ</title>
 </head>
 
 <body>
@@ -83,13 +83,13 @@ define('myyshop', true);
 <div id="block-parameters">
 
 <ul id="options-list">
-<li>Сортировать</li>
+<li>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</li>
 <li><a id="select-links" href="#"><? echo $sort_name; ?></a>
 
 <ul id="list-links-sort">
-<li><a href="orders.php?sort=all-orders">От А до Я</a></li>
-<li><a href="orders.php?sort=confirmed">Обработанные</a></li>
-<li><a href="orders.php?sort=no-confirmed">Не обработанные</a></li>
+<li><a href="orders.php?sort=all-orders">пїЅпїЅ пїЅ пїЅпїЅ пїЅ</a></li>
+<li><a href="orders.php?sort=confirmed">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
+<li><a href="orders.php?sort=no-confirmed">пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></li>
 </ul>
 
 </li>
@@ -99,9 +99,9 @@ define('myyshop', true);
 <div id="block-info">
 
 <ul id="review-info-count">
-<li>Всего заказов - <strong><?php echo $all_count_result;?></strong></li>
-<li>Обработанных - <strong><?php echo $buy_count_result;?></strong></li>
-<li>Не обработанных - <strong><?php echo $no_buy_count_result;?></strong></li>
+<li>пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - <strong><?php echo $all_count_result;?></strong></li>
+<li>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - <strong><?php echo $buy_count_result;?></strong></li>
+<li>пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - <strong><?php echo $no_buy_count_result;?></strong></li>
 </ul>
 </div>
 
@@ -115,18 +115,18 @@ define('myyshop', true);
         {
             if($row["order_confirmed"] == 'yes')
             {
-                $status = '<span class="green">Обработан</span>';
+                $status = '<span class="green">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span>';
             } else
             {
-                $status = '<span class="red">Не обработан</span>';
+                $status = '<span class="red">пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span>';
             }
             
             echo '
             <div class="block-order">
             
             <p class="order-datetime" >'.$row["order_datetime"].'</p>
-            <p class="order-number">Заказ № '.$row["order_id"].' - '.$status.'</p>
-            <p class="order-link"><a class="green" href="view_order.php?id='.$row["order_id"].'">Подробнее</a></p>
+            <p class="order-number">пїЅпїЅпїЅпїЅпїЅ пїЅ '.$row["order_id"].' - '.$status.'</p>
+            <p class="order-link"><a class="green" href="view_order.php?id='.$row["order_id"].'">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></p>
             </div>            
             ';
         } while ($row = mysql_fetch_array($result));
